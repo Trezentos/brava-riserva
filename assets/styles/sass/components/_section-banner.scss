@@ -53,6 +53,11 @@
       max-width: 210px;
       padding: 19px 30px 19px;
 
+      span {
+        font-weight: 600;
+        letter-spacing: 0;
+      }
+
     }
   }
 
@@ -86,6 +91,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+
+    animation: banner_vert 22s ease-in infinite;
 
 
     &.video{
@@ -147,7 +154,7 @@
 
 @keyframes banner_vert {
   0%   { background-position: center top 0; }
-  50%  { background-position: center top -300px; }
+  50%  { background-position: center top -280px; }
   100% { background-position: center top 0; }
 }
 

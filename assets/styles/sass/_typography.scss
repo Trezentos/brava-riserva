@@ -5,14 +5,13 @@ a:hover{ color: $primary-color; }
 strong{ font-weight: 900; color: $root-color; }
 
 h1, h2{
-  font-size: 1.8em;
-  line-height: 2.2;
+  font-size: 3.3em;
+  line-height: 1.2109;
   font-weight: 400;
-  font-family: 'condor';
+  font-family: $secondary-font;
   color: $root-color;
-  letter-spacing: .4em;
+  letter-spacing: 0;
   margin-bottom: 30px;
-  text-transform: uppercase;
   // text-align: center;
 
   &.is-big{

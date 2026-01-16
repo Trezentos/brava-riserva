@@ -20,7 +20,7 @@
   // width: 400px;
   max-width: 100%;
   outline: none;
-  font-family: 'acumin-pro';
+  font-family: $primary-font  ;
   overflow: hidden;
   letter-spacing: .2em;
   @include text($color: #FFF, $size: 1.3em, $lh: 1.4, $weight: 400, $align: center);
@@ -28,6 +28,7 @@
   span{
     position: relative;
     z-index: 1;
+    font-size: 16px;
   }
 
   &:after{

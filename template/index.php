@@ -73,7 +73,10 @@ get_header();
 
 					<?php if( $rs->link ){ ?>
 					<a href="<?=$rs->link; ?>" target="<?=($rs->destino_cta=="_self"?"":"_blank"); ?>"
-                       class="btn padding-top:23px_windows is-secondary  is-uppercase"><span class="primary-font"><?=$rs->texto_cta; ?></span>
+                       class="btn padding-top:23px_windows is-primary">
+                        <span class="primary-font">
+                            <?=$rs->texto_cta; ?>
+                        </span>
 					</a>
 					<?php } ?>
 				</div>
@@ -112,19 +115,23 @@ get_header();
 			<div class="column is-4-widescreen is-4-desktop is-5-tablet is-12-mobile mt30 mt0-mobile pr0 pr10-mobile">
 
 				<h2 class="waypoint animation_bottom">
-					Se a vida é um mar<br>
-					de possibilidades, o Plaza Beach Residence é um mergulho no inesquecível.
+					a Praia Brava<br>
+					pulsa e evolui
 				</h2>
 
 				<hr class="waypoint animation_scale">
 
 				<p class="mt40 waypoint animation_bottom">
-					Inspirado no encontro do sol com a brisa litorânea entrega uma combinação única de iluminação e ventilação natural. Um conceito para representar o frescor marinho em todas as temporadas de praia.
-					<br><br>
-					Tudo pensando a partir de uma arquitetura que reverencia a silhueta das ondas em espaços fluidos e integrados, enquanto universos de lazer ambientam a sua liberdade.
-					<br><br>
-					Uma obra criada para garantir o seu conforto e bem-estar o ano inteiro.
-				</p>
+                    E é neste cenário dinâmico que surge um projeto pensado para quem deseja respirar mais fundo.
+                    Um lugar onde o verde não está apenas ao redor,
+                    mas dentro.
+                    <br><br>
+                    Brava Riserva é um refúgio que entrega a experiência de caminhar por um jardim em meio à cidade.
+                    Um encontro entre o natural e o contemporâneo, entre o conforto e a simplicidade do ar livre.
+                    <br><br>
+                    Aqui, o tempo encontra outro ritmo. E cada detalhe foi pensado para que você encontre o seu.
+
+                </p>
 
 			</div>
 
