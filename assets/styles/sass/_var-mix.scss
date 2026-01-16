@@ -13,9 +13,30 @@
 //     font-display: swap;
 // }
 
+@font-face {
+    font-family: 'Bulings Nature';
+    src: url('../../fonts/BulingsNature.woff2') format('woff2'),
+    url('../../fonts/BulingsNature.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bulings Nature';
+    src: url('../../fonts/BulingsNatureItalic-Italic.woff2') format('woff2'),
+    url('../../fonts/BulingsNatureItalic-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
 
 
 
+
+
+$primary-font: 'Montserrat', sans-serif;
+$secondary-font: 'Bulings Nature', sans-serif;
 
 // VARS
 
@@ -35,6 +56,8 @@ $d-gray:            #a09689;
 $grey: $gray-color; $l-grey: $l-gray; $ll-grey: $ll-gray; $d-grey: $d-gray;
 
 
+.primary-font { font-family: $primary-font !important; }
+.secondary-font { font-family: $secondary-font !important; }
 
 .is-absolute{ position: absolute; }
 
@@ -72,11 +95,6 @@ address{ font-style: normal; }
 |                          |
 | -------------------------|
 */
-
-.font-primary{ font-family: 'acumin-pro' !important; }
-.font-secondary{ font-family: 'condor' !important; }
-
-
 
 // ////////////////////////////// MIXINS
 

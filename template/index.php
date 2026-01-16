@@ -69,15 +69,11 @@ get_header();
 
 			<div class="wrap is-relative">
 				<div class="txt-banner waypoint animation_bottom_dd3 animated">
-					<div class="star waypoint animation_scale_d3 animated">
-						<img src="<?=IMG?>icons/star-white.svg" alt="">
-					</div>
-
-					<div class="h1"><?=$rs->titulo?></div>
+					<div class="h1 secondary-font"><?=$rs->titulo?></div>
 
 					<?php if( $rs->link ){ ?>
 					<a href="<?=$rs->link; ?>" target="<?=($rs->destino_cta=="_self"?"":"_blank"); ?>"
-                       class="btn padding-top:23px_windows is-secondary is-uppercase"><span><?=$rs->texto_cta; ?></span>
+                       class="btn padding-top:23px_windows is-secondary  is-uppercase"><span class="primary-font"><?=$rs->texto_cta; ?></span>
 					</a>
 					<?php } ?>
 				</div>

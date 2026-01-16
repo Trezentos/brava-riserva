@@ -86,7 +86,7 @@ get_barra_header();
 		<div class="well">
 			<?php
 			$imgUpload = new ImageUploadComponent('imagem', 'Imagem Desktop', $q->imagem);
-			$imgUpload->setObs('A imagem deve ter 1920x800px.');
+			$imgUpload->setObs('A imagem deve ter 1920x1080px.');
 			$imgUpload->render();
 			?>
 		</div>

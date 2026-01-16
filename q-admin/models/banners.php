@@ -127,7 +127,7 @@ if($_POST && isset($_POST['submit']))
 
 			$image = new Image(TEMP.$fileName);
 			$image->setPathToTempFiles(TEMP);
-			$image->resize(1920, 800, "crop", "c", "c", 90, "webp");
+			$image->resize(1920, 1080, "crop", "c", "c", 100, "webp");
 			$image->save(ROOT_UPLOADS_IMG.$fileNewName, "", "webp");
 			
 			$fileNewName = $fileNewName.'.'.$extensao;

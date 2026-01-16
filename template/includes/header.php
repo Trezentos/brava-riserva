@@ -33,9 +33,9 @@ $pg = $_SEO["permalink"];
 
 
 		<!-- FONTS -->
-		<link rel="stylesheet" href="https://use.typekit.net/yax3jse.css">
-
-
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 
 		<!-- MOBILE -->
@@ -106,15 +106,12 @@ $pg = $_SEO["permalink"];
 
 					<div class="column is-3-tablet is-4-mobile pr0 waypoint animation_left_dd1">
 						<a href="<?=HTTP?>" title="<?=EMPRESA?>">
-							<img src="<?=IMG?>logo-plaza.svg" alt="logo <?=EMPRESA?>" class="logo is-hidden-mobile">
-							<img src="<?=IMG?>plaza-beach-residence-light.svg" alt="logo <?=EMPRESA?>" class="logo is-hidden-tablet">
+							<img src="<?=IMG?>main-logo.webp" alt="logo <?=EMPRESA?>" class="logo is-hidden-mobile">
 						</a>
 					</div>
 
 					<div class="column is-3-tablet is-4-mobile pl70 pr50 pr10-tablet pl20-mobile pr10-mobile waypoint animation_left_dd2">
-						<a href="https://www.camposincorporadora.com.br/" title="Campos Incorporadora" target="_blank">
-							<img src="<?=IMG?>logo-campos-construtora.svg" alt="logo campos" class="campos mt5 mt0-mobile">
-						</a>
+
 					</div>
 
 

@@ -12,6 +12,11 @@
   padding: 0 0 0px;
   background-color: $l-gray;
 
+
+  .wrap {
+    height: 100%;
+  }
+
   .cycle-prev, .cycle-next{
     @include absolute($b: 13%, $r: 21%, $z: 120);
     @include size(100px);
@@ -37,14 +42,17 @@
 
   .txt-banner{
     left: 0%;
-    top: 260px;
-    position: relative;
-    z-index: 2;
-    width: 355px;
-    // padding: 0 60px;
+    bottom: 129px;
+    position: absolute;
+    z-index: 4;
+
 
     .btn{
-      margin-top: 50px;
+      margin: 0;
+      display: block;
+      max-width: 210px;
+      padding: 19px 30px 19px;
+
     }
   }
 
@@ -52,19 +60,12 @@
   .h1{
     line-height: 0.85;
     font-size: 8em;
-    // @include fs-vw(8);
     font-weight: 300;
-    font-family: 'condor';
-    color: #f8f8f8;
-    margin-bottom: 2px;
-    // letter-spacing: 10px;
+    margin-bottom: 43px;
+    color: #d2d1cb;
 
     p{ font-size: 1em; }
 
-    em{
-      font-family: 'richmond-display';
-      font-weight: 200;
-    }
   }
 
   .h2{
@@ -84,7 +85,8 @@
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
-    // animation: banner_vert 22s ease-in infinite;
+    position: relative;
+
 
     &.video{
       pointer-events: none;
@@ -104,6 +106,20 @@
       @include absolute($r: 10px, $t: 3px);
       @include size(61px);
     }
+
+
+
+      &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background-color: #000000;
+        opacity: 0.5;
+        z-index: 3;
+      }
   }
 
   .cycle-pager{
