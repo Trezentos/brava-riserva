@@ -1,0 +1,492 @@
+
+
+/*********************** TABLET LANDSCAPE ***********************/
+
+@media only screen and (min-width: 577px) and (max-width: 1024px){
+
+    body{ font-size: 54%; }
+
+    .wrap{ padding: 0 40px; }
+
+    section{ padding: 70px 0; }
+
+
+    // TITLES
+    // h1, h2{ font-size: 3.0em; }
+    // h3{ font-size: 2.4em; }
+    // h4{ font-size: 1.9em; }
+
+
+    // MENU
+    nav.links{ display: none; }
+
+    .menu .container-menu{
+        margin-top: 16vh;
+        margin-left: 23vw;
+    }
+
+    .btn{ padding: 18px 32px 15px; }
+
+    header{ padding-top: 60px; }
+
+
+    // BANNER
+    .section-banners{
+        .cycle-slideshow .li{ height: 680px; }
+    }
+
+    .section-plaza .txt{ top: 100px; }
+   
+    .section-home-contato .pessoa{ max-width: 375px; }
+
+
+
+    // .section-plantas{
+    //     .plantas-nav{
+    //         a{
+    //             padding: 9px 10px 7px 15px;
+    //         }
+    //     }
+
+    //     .plantas-slide{
+    //         .leg{
+    //             font-size: 2em;
+    //         }
+    //         .metragem{
+    //             font-size: 2em;
+    //         }
+    //     }
+    // }
+}
+
+
+
+
+
+
+
+
+
+
+/*********************** TABLET PORTRAIT **********************/
+
+@media only screen and (min-width: 577px) and (max-width: 768px){
+
+    body{ font-size: 47%; }
+
+    section{ padding: 50px 0; }
+
+    h1, h2{
+        &.is-big{
+            font-size: 2.6em;
+        }
+    }
+
+    .menu .menu-item{ margin-bottom: 5vh; font-size: 2.6vh; }
+
+    .section-intro{
+        img{ max-width: 518px; }
+
+        .sun{ width: 70px; left: 5px; top: 28%; }
+    }
+
+
+    .section-block-2{
+        .slide-galeria{ padding: 40px 50px 0 80px; }
+
+        .img{ margin-left: 60px; max-width: 280px; }
+    }
+
+    .section-lazer h2{ font-size: 6em; }
+
+    .section-plaza .txt{
+        padding: 0 30px;
+        top: 20px;
+    }
+
+
+    .section-diferenciais{
+        .serv-list .bt-expand span{ width: 300px; }
+        .serv-list .bt-expand:before{ width: 93%; }
+        .box_i{ padding: 0 10px; margin-bottom: 15px; }
+    }
+
+    .section-localizacao h2{
+        font-size: 3.8em;
+    }
+
+
+    .section-home-contato .pessoa{ max-width: 285px; }
+    .section-home-contato .campos{ max-width: 200px; }
+
+    // .section-plantas{
+    //     .plantas-nav{ margin-top: -110px; }
+
+    //     .plantas-slide{
+    //         .leg{
+    //             font-size: 1.8em;
+    //         }
+    //         .metragem{
+    //             font-size: 1.8em;
+    //         }
+    //     }
+    // }
+
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************************* SMARTPHONE **************************/
+
+@media only screen and (max-width: 576px) {
+
+    // BODY
+    body{
+        font-size: 55%;
+        // line-height: 1.6;
+    }
+
+    // p{ font-size: 1.6em; }
+
+    // hr{
+    //     height: 1px;
+    // }
+
+    // DISABLE ANIMATION
+    // .waypoint{ opacity: 1; }
+
+
+    // CONTAINER
+    .wrap{
+        padding: 0 35px;
+    }
+
+    section{ padding: 70px 0; }
+
+
+    // HEADER
+    header{
+        height: 80px; 
+        padding-top: 50px;
+
+        .logo{
+            max-width: 95px;
+            margin: 0px 0 0;
+        }
+
+        &.is-compact{
+            height: 70px;
+            padding-top: 17px;
+
+            .logo{
+                margin-top: 6px;
+                max-width: 70px;
+            }
+
+            // .navbar-burger{
+            //     margin-top: 0px;
+            // }
+        }
+
+        .navbar-burger{
+            height: 2.1rem;
+            margin-top: 0; 
+            @include absolute($r: 15px);
+        }
+    }
+
+
+    // TITLES
+    h1, h2{
+        &.is-big{
+            font-size: 2.7em;
+            letter-spacing: .15em;
+        }
+    }
+
+    // h3{ font-size: 3.2em; }
+    // h4{ font-size: 14px; }
+
+
+    .btn{
+        font-size: 1.1em;
+        padding: 15px 42px 14px !important;
+
+        &.is-secondary{
+            padding: 19px 45px 17px;
+        }
+
+        &.is-big-mob{
+            font-size: 1.2em;
+            padding: 24px 57px;
+        }
+    }
+
+
+
+    // MENU
+    .menu{
+        height: 100dvh;
+
+         .container-menu{
+            margin-top: 14vh;
+            margin-left: 17vw;
+        }
+        
+        .bt-close-menu{
+            top: 30px;
+            right: 30px;
+            max-width: 25px;
+        }
+
+        .menu-item{
+            font-size: 1.1em;
+            margin-bottom: 5.0vh;
+        }
+
+        .phone{
+            right: 5vw;
+            font-size: .8em;
+        }
+
+        .logo{
+            max-width: 76px;
+        }
+    }
+
+
+    // BANNERS
+    .section-banners{
+        .txt-banner{
+            top: 235px;
+
+            .btn{ margin-top: 35px; }
+        }
+
+        .h1{ font-size: 6em; }
+
+        .cycle-slideshow .li{
+            height: 585px;
+        }
+
+        .cycle-prev, .cycle-next{
+            right: 19%;
+            bottom: 7%;
+
+            svg{ transform: scale(0.85); }
+        }
+
+        .cycle-next{ right: 2%; }
+
+        .cycle-slideshow .li .star{
+            width: 40px;
+            right: 100px;
+        }
+    }
+
+   
+
+   
+   
+   
+
+
+
+
+
+    // HOME *************************************
+   
+    .section-intro {
+        .img{ max-width: calc(100% + 175px); margin-left: -72px }
+        .sun{ max-width: 85px; left: 74%; top: -29px; }
+    }
+
+
+    .section-block-2{
+        p{ font-size: .8em; letter-spacing: .5em; }
+        hr{ width: 20px; margin-bottom: 12px; }
+    }
+
+
+    .section-lazer{
+        background-position: center top;
+        background-size: 1000px;
+
+        h2{ font-size: 5.4em; }
+        h3{ font-size: 1.3em; }
+        h5{ font-size: 1.1em; }
+
+        h6{ line-height: inherit; }
+
+        .itens{
+            font-size: 1em;
+            line-height: 2.4;
+
+            .num{
+                @include size(22px);
+    
+                p{ transform: translateY(-1px); }
+            }
+        }
+
+        .box-itens-lazer{
+            max-height: 0;
+            overflow: hidden;
+            padding-top: 0;
+            padding-bottom: 0;
+            margin-top: 0 !important;
+            @include transition(.8s);
+
+            &.is-active{
+                margin-top: 10px !important;
+                padding-top: 10px;
+                padding-bottom: 30px;
+                max-height: 800px;
+            }
+        }
+
+        h5.pavimento {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+    }
+
+
+    .section-plaza{
+        .txt{ font-size: 1.7em; }
+        
+        .box-p{
+            margin-top: -80px;
+        }
+    }
+
+
+    .section-plantas{
+        .plantas-slide .box-img{
+            margin-bottom: 0px;
+        }
+
+        .plantas-nav{
+            // width: 43%;
+            // margin-top: -60px;
+
+            a{
+                font-size: 1.2em;
+                padding: 8px 11px 7px;
+                letter-spacing: .05em;
+                text-align: center;
+                // border-radius: 15px;
+            }
+        }
+    }
+
+
+    .section-diferenciais{
+        .serv-list{
+            .content{
+                font-size: 1.7em;
+            }
+        
+            .bt-expand{
+                font-size: 2em;
+
+                span{
+                    width: auto;
+                    padding-right: 10px;
+                }
+                
+                &:before{
+                    width: 88%;
+                    background: #8e7d6e;
+                    height: 1px;
+                }
+            }
+
+            .icone{
+                font-size: 1.2em;
+                top: 7px;
+            }
+        }
+
+        .box_i{
+            padding: 0 9px;
+            margin-bottom: 0;
+
+            .box_img .ico{
+                max-height: 90%;
+                max-width: 70px;
+            }
+
+            .box_img{
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    
+   
+    .section-localizacao{
+        h2{
+            font-size: 3.8em;
+        }
+    
+        .proximidades .item{
+            font-size: 1.4em;
+        }
+        
+        .maps{
+            height: 360px;
+        }
+
+        .address{
+            font-size: 1.4em;
+        }
+    }
+
+    .section-home-contato{
+        .box-form{
+            border-radius: 0;
+            background-repeat: repeat;
+            background-position: left top;
+
+            p{ font-size: 1.6em; }
+        }
+
+        .emps{
+            img{
+                max-height: 154px;
+            }
+        }
+    }
+
+   
+
+
+
+    // FOOTER
+
+    footer{
+        // small{
+        //     display: block;
+        //     line-height: 1.4;
+        // }
+        .assinatura{ font-size: 1.4em; }
+    }
+
+}
