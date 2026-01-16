@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 16-Jan-2026 às 21:26
+-- Tempo de geração: 16-Jan-2026 às 22:02
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 7.4.33
 
@@ -92,7 +92,7 @@ CREATE TABLE `adm_banners` (
 --
 
 INSERT INTO `adm_banners` (`id`, `titulo`, `subtitulo`, `status`, `link`, `imagem`, `imagem_mobile`, `destino_cta`, `texto_cta`, `video`, `ordem`, `criado`, `atualizado`) VALUES
-(8, '<p>onde a vida flui</p>\r\n<p>com mais calma</p>', '', 1, 'https://api.whatsapp.com/send?phone=554799999999', 'banner-8-766.webp', 'banner-mobile-8-940.webp', '_blank', 'Saiba Mais', '', '001', '2022-10-04 15:10:46', '2026-01-16 17:19:15');
+(8, '<p>onde a vida flui</p>\r\n<p>com mais calma</p>', '', 1, 'https://api.whatsapp.com/send?phone=554799999999', 'banner-8-766.webp', 'banner-mobile-8-940.webp', '_blank', 'saiba mais', '', '001', '2022-10-04 15:10:46', '2026-01-16 17:34:44');
 
 -- --------------------------------------------------------
 
