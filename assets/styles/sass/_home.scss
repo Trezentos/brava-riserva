@@ -414,6 +414,32 @@
   }
 }
 
+// Notebook
+@media only screen and (min-width: 1025px) and (max-width: 1499px) {
+
+  .section-block-2 {
+    .all-contents {
+      justify-content: space-between !important;
+      flex-wrap: nowrap !important;
+
+      .slide-galeria {
+        margin-top: 120px !important;
+      }
+    }
+
+
+
+  }
+
+  .section-lazer {
+    .box-itens-lazer {
+      &.pl30 {
+        padding-left: 0 !important;
+      }
+    }
+  }
+}
+
 
 // Tablet landscape
 @media only screen and (min-width: 577px) and (max-width: 1024px){

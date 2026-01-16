@@ -103,9 +103,12 @@ p{ font-size: 1.4em; }
 
 // Smartphone
 @media(max-width: 578px){
+
+  // TITLES
   h1, h2{
     &.is-big{
-      font-size: 2.6em;
+      font-size: 2.7em;
+      letter-spacing: .15em;
     }
   }
 }
