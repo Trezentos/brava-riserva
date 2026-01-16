@@ -1,0 +1,26 @@
+
+.bt-whatsbox{
+  @include fixed($b: 25px, $r: 25px, $z: 999);
+  @include size(54px);
+  border-radius: 50%;
+  background: $primary-color;
+  text-align: center;
+  color: #FFF;
+  box-shadow: 0 0 0 0 rgba(0,0,0,1);
+  animation: pulse 2s infinite;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(.74,.13,.42,1.81);
+
+  i{ line-height: 55px; font-size: 28px; }
+
+  &.hide{ opacity: 0; transform: scale(0); }
+  &:hover{ transform: scale(1.2); }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(75, 67, 47, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(0,168,89,0); }
+  100% {  box-shadow: 0 0 0 0 rgba(0,168,89,0); }
+}
+
+

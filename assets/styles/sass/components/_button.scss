@@ -1,0 +1,112 @@
+/* ------------------------|
+|                          |
+|       STYLE BUTTONS      |
+|                          |
+| -------------------------|
+*/
+
+.btn{
+  position: relative;
+  background: $primary-color;
+  border: 1px solid $primary-color;
+  border-radius: 50px;
+  display: inline-block;
+  margin: 25px auto;
+  padding: 26px 55px 26px;
+  cursor: pointer;
+  transition: all .2s linear;
+  height: auto;
+  // text-transform: uppercase;
+  // width: 400px;
+  max-width: 100%;
+  outline: none;
+  font-family: 'acumin-pro';
+  overflow: hidden;
+  letter-spacing: .2em;
+  @include text($color: #FFF, $size: 1.3em, $lh: 1.4, $weight: 400, $align: center);
+
+  span{
+    position: relative;
+    z-index: 1;
+  }
+
+  &:after{
+    content:'';
+    background: $dark-color;
+    @include size(100%, 0);
+    @include absolute($t: 0, $l: 0%, $z: 0);
+    @include transition(0.5s);
+    border-radius: 30px;
+  }
+
+
+  &:hover{
+    color: #FFF;
+    border-color: $dark-color;
+
+    &:after{ height: 100%; left: 0; }
+  }
+
+  i{
+    font-size: 19px;
+    line-height: 25px;
+    margin-right: 3px;
+  }
+
+  svg{
+    margin-left: 10px;
+    transform: translateY(3px);
+  }
+
+  &.is-small{
+    padding: 10px 35px 10px;
+  }
+
+  &.is-transparent{
+    background: none;
+    color: #5F584D;
+
+    &:hover{
+      color: $primary-color;
+    }
+
+    svg{
+      path{
+        stroke: $primary-color;
+      }
+    }
+  }
+
+  &.is-secondary{
+    background: $secondary-color;
+    border-color: $secondary-color;
+    padding: 19px 58px 19px;
+  }
+}
+
+/*********************** TABLET LANDSCAPE ***********************/
+
+@media only screen and (min-width: 577px) and (max-width: 1024px){
+
+  .btn{ padding: 18px 32px 15px; }
+
+
+}
+
+
+// Smartphone
+@media(max-width: 578px){
+  .btn{
+    font-size: 1.1em;
+    padding: 15px 42px 14px !important;
+
+    &.is-secondary{
+      padding: 19px 45px 17px;
+    }
+
+    &.is-big-mob{
+      font-size: 1.2em;
+      padding: 24px 57px;
+    }
+  }
+}

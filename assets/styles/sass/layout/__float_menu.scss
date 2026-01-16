@@ -1,0 +1,161 @@
+
+/* ------------------------|
+|                          |
+|         MENU FLOAT       |
+|                          |
+| -------------------------|
+*/
+
+.menu{
+  @include fixed($t: 0, $r: -100%, $z: 9999);
+  @include size(100%, 100vh);
+  display: flex;
+  overflow: hidden;
+  transition: all 1s cubic-bezier(0.54, 0.18, 0.13, 1);
+  // background-color: $l-gray;
+  background: url(../../img/bg-menu.webp) center center;
+  background-size: cover;
+  opacity: 0;
+
+  &.is-active{
+    right: 0;
+    opacity: 1;
+  }
+
+  .container-menu{
+    margin-top: 20vh;
+    margin-left: 38vw;
+    position: relative;
+    width: 100%;
+  }
+
+  .bt-close-menu{
+    @include absolute($t: 45px, $r: 60px);
+    @include transition(0.6s);
+    cursor: pointer;
+
+    &:hover{
+      transform: scale(1.2) rotate(90deg);
+    }
+  }
+
+  .logo{
+    @include absolute($b: 6%, $l: 5vw);
+    @include size(170px, auto);
+    // display: block;
+  }
+
+  .phone{
+    @include absolute($b: 7%, $r: 6vw);
+
+    a{
+      letter-spacing: 0.3em;
+
+      &:hover{
+        color: $secondary-color;
+      }
+    }
+  }
+
+  .menu-item{
+    position: relative;
+    font-family: 'condor';
+    // font-size: 3.5em;
+    @include fs-vw(3);
+    font-weight: 300;
+    line-height: 1.2vh;
+    display: inline-block;
+    margin-bottom: 5.6vh;
+    color: $primary-color;
+    letter-spacing: .2em;
+    @include transition(0.6s);
+
+    &:hover, &.current{
+      color: $secondary-color;
+      transform: translateX(10px);
+
+      &:after{
+        width: 45px;
+      }
+    }
+
+    &:after{
+      content: ' ';
+      @include absolute($t: 47%, $r: calc(100% + 30px));
+      background-color: $secondary-color;
+      @include size(0, 3px);
+      @include transition(0.6s);
+    }
+  }
+}
+
+
+@media only screen and (min-width: 577px) and (max-width: 1024px){
+
+
+  // MENU
+  nav.links{ display: none; }
+
+  .menu .container-menu{
+    margin-top: 16vh;
+    margin-left: 23vw;
+  }
+
+
+
+
+
+}
+
+/*********************** TABLET PORTRAIT **********************/
+
+@media only screen and (min-width: 577px) and (max-width: 768px){
+
+  .menu .menu-item{ margin-bottom: 5vh; font-size: 2.6vh; }
+
+
+}
+
+// Smartphone
+@media(max-width: 578px){
+
+
+  // MENU
+  .menu{
+    height: 100dvh;
+
+    .container-menu{
+      margin-top: 14vh;
+      margin-left: 17vw;
+    }
+
+    .bt-close-menu{
+      top: 30px;
+      right: 30px;
+      max-width: 25px;
+    }
+
+    .menu-item{
+      font-size: 1.1em;
+      margin-bottom: 5.0vh;
+    }
+
+    .phone{
+      right: 5vw;
+      font-size: .8em;
+    }
+
+    .logo{
+      max-width: 76px;
+    }
+  }
+
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+footer{
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  p{ font-size: 1.1em; }
+
+  .assinatura{
+    color: $primary-color;
+
+    a{
+      &:hover{ color: #FFF; }
+    }
+  }
+}
+
+
+// Smartphone
+@media(max-width: 578px){
+
+  // FOOTER
+  footer{
+    // small{
+    //     display: block;
+    //     line-height: 1.4;
+    // }
+    .assinatura{ font-size: 1.4em; }
+  }
+
+
+}

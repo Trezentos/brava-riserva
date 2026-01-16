@@ -87,10 +87,10 @@ define('PHP',ROOT.'/php/');
 define('TEMPLATE',ROOT.'/template/');
 define('ASSETS',HTTP.'/assets/');
 define('IMG',ASSETS.'img/');
-define('CSS',ASSETS.'css/');
+define('CSS',ASSETS.'styles/css/');
 define('JS',ASSETS.'js/');
 define('ROOT_JS',ROOT.'/assets/js/');
-define('ROOT_CSS',ROOT.'/assets/css/');
+define('ROOT_CSS',ROOT.'/assets/styles/css/');
 
 
 # MAX UPLOAD FILE
@@ -159,8 +159,8 @@ $style = [
 if (defined('IS_LIGHTHOUSE')) {
 	if( !IS_LIGHTHOUSE ){
 		add_style([
-			'css/font-awesome.min.css',
-			'css/sweetalert2.min.css'
+			'styles/css/font-awesome.min.css',
+			'styles/css/sweetalert2.min.css'
 		]);
 
 		add_javascript(['sweetalert2.min.js']);

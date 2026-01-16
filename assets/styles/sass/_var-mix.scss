@@ -36,6 +36,48 @@ $grey: $gray-color; $l-grey: $l-gray; $ll-grey: $ll-gray; $d-grey: $d-gray;
 
 
 
+.is-absolute{ position: absolute; }
+
+.bg-white{ background-color: #FFF !important; }
+.bg-gray{ background-color: $gray-color !important; }
+.bg-l-gray{ background-color: $l-gray !important; }
+.bg-ll-gray{ background-color: $ll-gray !important; }
+.bg-root{ background-color: $root-color !important; }
+.bg-primary{ background-color: $primary-color !important; }
+.bg-secondary{ background-color: $secondary-color !important; }
+
+.color-root{ color: $root-color; }
+.color-primary{ color: $primary-color !important; }
+.color-secondary{ color: $secondary-color !important; }
+.color-white{ color: #FFF !important; }
+.color-gray{ color: $gray-color !important }
+.color-gray-light{ color: $ll-gray !important }
+
+.is-pointer-off{ pointer-events: none; }
+
+.z-index-0{ z-index: 0; }
+.z-index-1{ z-index: 1; }
+.z-index-2{ z-index: 2; }
+
+.lp-0{ letter-spacing: 0; }
+
+
+.box{ border-radius: 0; box-shadow: none; }
+
+address{ font-style: normal; }
+
+/* ------------------------|
+|                          |
+|  STYLE CLASSES EXTRAS    |
+|                          |
+| -------------------------|
+*/
+
+.font-primary{ font-family: 'acumin-pro' !important; }
+.font-secondary{ font-family: 'condor' !important; }
+
+
+
 // ////////////////////////////// MIXINS
 
 // Background

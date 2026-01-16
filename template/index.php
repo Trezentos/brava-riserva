@@ -22,9 +22,9 @@ $qGaleria2 = $db->get_results("SELECT * FROM ".$tables['GALERIA_IMG']." WHERE at
 if( !IS_LIGHTHOUSE )
 {
 	add_style([
-		'css/owl.carousel.min.css', 
-		'css/owl.theme.default.min.css', 
-		'css/jquery.fancybox.min.css'
+		'styles/css/owl.carousel.min.css',
+		'styles/css/owl.theme.default.min.css',
+		'styles/css/jquery.fancybox.min.css'
 	]);
 
 	add_javascript([
@@ -59,10 +59,10 @@ get_header();
 
 
 		<?php
-		foreach($qBanners as $rs)
-		{
-			if( empty($rs->video) )
-			{
+            foreach($qBanners as $rs)
+            {
+                if( empty($rs->video) )
+                {
 		?>
 
 		<div class="li" style="background-image: url(<?=HTTP_UPLOADS_IMG.(!$MOBILE ? $rs->imagem : $rs->imagem_mobile); ?>); ">
