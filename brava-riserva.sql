@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 16-Jan-2026 às 22:02
+-- Tempo de geração: 19-Jan-2026 às 21:51
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 7.4.33
 
@@ -63,7 +63,8 @@ INSERT INTO `adm_acessos` (`id`, `id_usuario`, `data_acesso`, `ip`) VALUES
 (22, 1, '2025-03-14 16:23:10', '201.131.139.162'),
 (23, 1, '2025-07-08 11:52:21', '201.131.85.39'),
 (24, 1, '2025-07-08 11:52:54', '201.131.85.39'),
-(25, 1, '2025-07-08 14:15:08', '201.131.85.39');
+(25, 1, '2025-07-08 14:15:08', '201.131.85.39'),
+(26, 1, '2026-01-19 10:57:40', '::1');
 
 -- --------------------------------------------------------
 
@@ -203,7 +204,7 @@ CREATE TABLE `adm_galeria` (
 
 INSERT INTO `adm_galeria` (`id`, `titulo`, `permalink`, `status`, `criado`) VALUES
 (1, 'Plaza Beach - Apartamento', 'plaza-beach-apartamento', 1, '2020-10-19 18:45:22'),
-(2, 'Plaza Beach - Lazer', 'plaza-beach-lazer', 1, '2024-10-30 17:18:16');
+(2, 'Brava Riserva - Lazer', 'plaza-beach-lazer', 1, '2024-10-30 17:18:16');
 
 -- --------------------------------------------------------
 
@@ -229,22 +230,21 @@ CREATE TABLE `adm_galeria_imagens` (
 --
 
 INSERT INTO `adm_galeria_imagens` (`id`, `id_galeria`, `arquivo`, `legenda`, `capa`, `ativo`, `ordem`, `categoria`, `criado`, `atualizado`) VALUES
-(103, 2, 'plaza-beach-lazer-2-155.jpg', 'Piscina Externa', 0, 0, '008', 'galeria', '2025-02-18 10:22:22', '2025-02-18 15:16:15'),
-(104, 2, 'plaza-beach-lazer-2-673.jpg', 'Área de Lazer', 0, 0, '007', 'galeria', '2025-02-18 10:22:26', '2025-02-18 15:16:15'),
-(105, 2, 'plaza-beach-lazer-2-959.jpg', 'Playground', 0, 0, '009', 'galeria', '2025-02-18 10:22:31', '2025-02-18 15:16:15'),
-(106, 2, 'plaza-beach-lazer-2-692.jpg', 'Sauna', 0, 0, '010', 'galeria', '2025-02-18 10:22:34', '2025-02-18 15:16:15'),
-(107, 2, 'plaza-beach-lazer-2-965.jpg', 'Salão Gourmet', 0, 1, '001', 'galeria', '2025-02-18 10:22:37', '2025-02-18 15:16:04'),
-(108, 2, 'plaza-beach-lazer-2-536.jpg', 'Salão Gourmet', 0, 1, '002', 'galeria', '2025-02-18 10:22:40', '2025-02-18 15:16:12'),
-(109, 2, 'plaza-beach-lazer-2-881.jpg', 'Salão Gourmet', 0, 1, '003', 'galeria', '2025-02-18 10:22:44', '2025-02-18 15:16:15'),
-(110, 2, 'plaza-beach-lazer-2-275.jpg', 'Salão Gourmet', 0, 1, '004', 'galeria', '2025-02-18 10:22:47', '2025-02-18 15:16:15'),
-(111, 2, 'plaza-beach-lazer-2-593.jpg', 'Sala de Jogos', 0, 1, '005', 'galeria', '2025-02-18 10:22:50', '2025-03-17 09:00:09'),
-(112, 2, 'plaza-beach-lazer-2-103.jpg', 'Espaço Fitness', 0, 1, '006', 'galeria', '2025-02-18 10:22:53', '2025-02-18 15:16:15'),
 (127, 1, 'plaza-beach-apartamento-1-817.jpg', 'Living Tipo 01', 0, 1, '', 'galeria', '2025-03-14 16:53:14', '2025-03-14 16:56:52'),
 (128, 1, 'plaza-beach-apartamento-1-497.jpg', 'Suíte Master Tipo 01', 0, 1, '', 'galeria', '2025-03-14 16:53:57', '2025-03-14 16:57:00'),
 (129, 1, 'plaza-beach-apartamento-1-285.jpg', 'Living Tipo 02', 0, 1, '', 'galeria', '2025-03-14 16:54:24', '2025-03-14 16:57:11'),
 (130, 1, 'plaza-beach-apartamento-1-133.jpg', 'Living Tipo 01', 0, 1, '', 'galeria', '2025-03-14 16:55:32', '2025-03-14 16:57:24'),
 (131, 1, 'plaza-beach-apartamento-1-934.jpg', 'Suíte Master Tipo 02', 0, 1, '', 'galeria', '2025-03-14 16:56:10', '2025-03-14 16:57:33'),
-(132, 1, 'plaza-beach-apartamento-1-308.jpg', 'Living Tipo 03', 0, 1, '', 'galeria', '2025-03-14 16:56:33', '2025-03-14 16:57:42');
+(132, 1, 'plaza-beach-apartamento-1-308.jpg', 'Living Tipo 03', 0, 1, '', 'galeria', '2025-03-14 16:56:33', '2025-03-14 16:57:42'),
+(133, 2, 'plaza-beach-lazer-2-158.jpg', 'Área de Lazer', 1, 1, '001', 'galeria', '2026-01-19 17:37:29', '2026-01-19 17:39:24'),
+(134, 2, 'plaza-beach-lazer-2-940.jpg', 'Piscina Externa', 0, 1, '002', 'galeria', '2026-01-19 17:37:30', '2026-01-19 17:38:32'),
+(135, 2, 'plaza-beach-lazer-2-92.jpg', 'Quiosque', 0, 1, '004', 'galeria', '2026-01-19 17:37:32', '2026-01-19 17:39:08'),
+(136, 2, 'plaza-beach-lazer-2-832.jpg', 'Lago', 0, 1, '005', 'galeria', '2026-01-19 17:37:34', '2026-01-19 17:39:38'),
+(137, 2, 'plaza-beach-lazer-2-433.jpg', 'Sala de Jogos', 0, 1, '003', 'galeria', '2026-01-19 17:37:34', '2026-01-19 17:38:50'),
+(138, 2, 'plaza-beach-lazer-2-996.jpg', 'Academia', 0, 1, '007', 'galeria', '2026-01-19 17:37:35', '2026-01-19 17:40:19'),
+(139, 2, 'plaza-beach-lazer-2-271.jpg', 'Pomar', 0, 1, '008', 'galeria', '2026-01-19 17:37:36', '2026-01-19 17:40:29'),
+(140, 2, 'plaza-beach-lazer-2-52.jpg', 'Playground', 0, 1, '006', 'galeria', '2026-01-19 17:37:37', '2026-01-19 17:39:57'),
+(141, 2, 'plaza-beach-lazer-2-512.jpg', 'Espaço Kids', 0, 1, '009', 'galeria', '2026-01-19 17:37:38', '2026-01-19 17:40:40');
 
 -- --------------------------------------------------------
 
@@ -368,7 +368,7 @@ ALTER TABLE `adm_usuarios`
 -- AUTO_INCREMENT de tabela `adm_acessos`
 --
 ALTER TABLE `adm_acessos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT de tabela `adm_banners`
@@ -404,7 +404,7 @@ ALTER TABLE `adm_galeria`
 -- AUTO_INCREMENT de tabela `adm_galeria_imagens`
 --
 ALTER TABLE `adm_galeria_imagens`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=133;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=142;
 
 --
 -- AUTO_INCREMENT de tabela `adm_paginas`

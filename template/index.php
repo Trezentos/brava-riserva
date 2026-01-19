@@ -73,7 +73,7 @@ get_header();
 
 					<?php if( $rs->link ){ ?>
 					<a href="<?=$rs->link; ?>" target="<?=($rs->destino_cta=="_self"?"":"_blank"); ?>"
-                       class="btn padding-top:23px_windows is-primary">
+                       class="btn is-primary">
                         <span class="primary-font">
                             <?=$rs->texto_cta; ?>
                         </span>
@@ -108,45 +108,51 @@ get_header();
 
 
 
-<section class="section-intro bg-l-gray pb70 pb0-mobile waypoint animation_bottom_d1 animated" id="empreendimento">
+<section class="section-intro bg-l-gray pt95 pb85 pb0-mobile waypoint animation_bottom_d1 animated is-relative" id="empreendimento">
 	<div class="wrap mt0-mobile">
 
 		<div class="columns is-mobile is-multiline">
-			<div class="column is-4-widescreen is-4-desktop is-5-tablet is-12-mobile mt30 mt0-mobile pr0 pr10-mobile">
+			<div class="column is-6-widescreen is-5-desktop is-5-tablet is-12-mobile mt0-mobile pr0 pr10-mobile">
 
-				<h2 class="waypoint animation_bottom">
+				<h2 class="waypoint animation_bottom mt45 mb45">
 					a Praia Brava<br>
 					pulsa e evolui
 				</h2>
 
 				<hr class="waypoint animation_scale">
 
-				<p class="mt40 waypoint animation_bottom">
+				<p class="mt45 waypoint animation_bottom mt45">
                     E é neste cenário dinâmico que surge um projeto pensado para quem deseja respirar mais fundo.
-                    Um lugar onde o verde não está apenas ao redor,
+                    <br>
+                    Um lugar onde o verde não está apenas ao redor, <br>
                     mas dentro.
                     <br><br>
                     Brava Riserva é um refúgio que entrega a experiência de caminhar por um jardim em meio à cidade.
+                    <br>
                     Um encontro entre o natural e o contemporâneo, entre o conforto e a simplicidade do ar livre.
                     <br><br>
+
                     Aqui, o tempo encontra outro ritmo. E cada detalhe foi pensado para que você encontre o seu.
 
                 </p>
 
 			</div>
 
-			<div class="column is-2-widescreen is-narrow-desktop is-narrow-tablet pr0-tablet pr0-tablet is-hidden-mobile"></div>
+<!--			<div class="column is-1-widescreen is-narrow-desktop is-narrow-tablet pr0-tablet pr0-tablet is-hidden-mobile"></div>-->
 
-			<div class="column is-6-widescreen is-7-desktop is-5-tablet is-12-mobile pl60 mt10 pl40-tablet pl0-mobile pb0-mobile mt50-mobile is-relative">
+			<div class="column is-6-widescreen is-7-desktop is-5-tablet is-12-mobile pl60 pl40-tablet pl0-mobile pb0-mobile mt50-mobile is-relative">
 
-				<picture>
-					<source srcset="<?=IMG?>img-intro.webp" media="(max-width: 578px)">
-					<source srcset="<?=IMG?>img-intro.webp" media="(min-width: 579px)">
-					<img src="<?=IMG?>img-intro.webp" alt="" class="img is-block waypoint animation_right_d1">
-				</picture>
+				<figure>
+                    <picture>
+                        <source srcset="<?=IMG?>img-intro.webp" media="(max-width: 578px)">
+                        <source srcset="<?=IMG?>img-intro.webp" media="(min-width: 579px)">
+                        <img src="<?=IMG?>img-intro.webp" alt="" class="img is-block waypoint animation_right_d1">
+                    </picture>
+                    <img src="<?=IMG.'clarus-logo.webp'?>" class="clarus-logo waypoint animation_top_d2" alt="">
+                </figure>
 
 				<span class="sun waypoint animation_scale_d2">
-					<img src="<?=IMG?>icons/sun.svg" alt="" class="spin">
+					<img src="<?=IMG?>icons/folha.webp" alt="" >
 				</span>
 
 			</div>
@@ -154,6 +160,9 @@ get_header();
 
 		
 	</div>
+    
+    
+    <img src="<?=IMG.'folha-background.webp'?>" class="folha-background waypoint animation_bottom_d2" alt="">
 </section>
 
 
@@ -168,85 +177,55 @@ get_header();
 
 
 
-<section class="section-block-2 pt40" id="detalhes-tec">
+<section class="section-block-2 bg-primary pt80" id="detalhes-tec">
  		
-	<div class="columns is-mobile is-multiline all-contents ">
-		<div class="column is-5-widescreen is-5-desktop is-12-tablet is-12-mobile pr40-tablet
-		pl50-mobile pr50-mobile is-order-2-mobile">
-			
+	<div class="slide-content ">
+		<div class="slide-item is-relative">
+            <img src="<?=IMG.'icons/folha-branca.webp'?>" class="folha waypoint animation_left" alt="">
 			<div class="slide-galeria owl-carousel owl-theme waypoint animation_left">
+
+
 				<div class="item">
 					<a href="<?=IMG?>slide-conceito/1-lg.webp" data-fancybox="gal" data-caption="Fachada">
 						<img class="is-block" src="<?=IMG?>slide-conceito/1-tb.webp" alt="">
 					</a>
 				</div>
-
-				<div class="item">
-					<a href="<?=IMG?>slide-conceito/2-lg.webp" data-fancybox="gal" data-caption="Acesso Externo">
-						<img class="is-block" src="<?=IMG?>slide-conceito/2-tb.webp" alt="">
-					</a>
-				</div>
-
-				<div class="item">
-					<a href="<?=IMG?>slide-conceito/3-lg.webp" data-fancybox="gal" data-caption="Hall">
-						<img class="is-block" src="<?=IMG?>slide-conceito/3-tb.webp" alt="">
-					</a>
-				</div>
-
-				<div class="item">
-					<a href="<?=IMG?>slide-conceito/4-lg.webp" data-fancybox="gal" data-caption="Região">
-						<img class="is-block" src="<?=IMG?>slide-conceito/4-tb.webp" alt="">
-					</a>
-				</div>
-				<div class="item">
-					<a href="<?=IMG?>slide-conceito/5-lg.webp" data-fancybox="gal" data-caption="Fachada">
-						<img class="is-block" src="<?=IMG?>slide-conceito/5-tb.webp" alt="">
-					</a>
-				</div>
 			</div>
-
 		</div>
 
 
-		<div class="column is-narrow-fullhd is-3-widescreen is-3-desktop is-6-tablet
-		is-5-mobile mt130  mt50-tablet  mt20-mobile pl0-mobile   is-order-0-mobile"
-        >
-			<img src="<?=IMG?>fachada-plaza-beach.webp" alt="fachada" class="img waypoint animation_bottom_d1">
-		</div>
+		<div class="slide-description pl30-notebook pl60 pt40 pr40-notebook">
+			<div>
+                <h2>o empreendimento</h2>
+                <hr>
+                <h3 class="mb45">
+                    33 andares <br>
+                    6 apartamentos por andar <br>
+                    162 unidades
+                </h3>
 
+                <p>
+                    Cinco elevadores <br>
+                    Circuito fechado de câmeras <br>
+                    Hall de entrada com portaria automatizada <br>
+                    Controle de acesso por reconhecimento facial <br>
+                    Gerador para as áreas comuns e elevadores <br>
+                    infraestrutura para abastecimento de carros elétricos <br>
+                    Hobby box privativo nas garagens <br>
+                    Bicicletário <br>
+                    Home market <br>
+                    Pet place <br>
+                </p>
 
-		<div class="column is-3-fullhd is-4-widescreen is-6-tablet is-7-mobile
-		 font-secondary mt130    mt50-tablet pl40-tablet  mt20-mobile pl20-mobile is-order-1-mobile">
-			<p class="ml20 ml10-mobile waypoint animation_right">74 METROS DE ALTURA</p>
-			<hr class=" waypoint animation_scale">
-
-			<p class="ml20 ml10-mobile waypoint animation_right">25 PAVIMENTOS</p>
-			<hr class=" waypoint animation_scale">
-
-			<p class="ml20 ml10-mobile waypoint animation_right">LAZER COM MAIS DE 800 M<sup>2</sup></p>
-			<hr class=" waypoint animation_scale">
-
-			<p class="ml20 ml10-mobile waypoint animation_right">3 APARTAMENTOS POR ANDAR</p>
-			<hr class=" waypoint animation_scale">
-
-			<p class="ml20 ml10-mobile waypoint animation_right">
-                3 SUÍTES OU <br>
-                2 SUÍTES E 2 DEMI-SUÍTES
-
-            </p>
-			<hr class=" waypoint animation_scale">
-
-			<p class="ml20 ml10-mobile waypoint animation_right">59 APARTAMENTOS</p>
-			<hr class=" waypoint animation_scale">
-
-			<p class="ml20 ml10-mobile waypoint animation_right">3 ELEVADORES</p>
-			<hr class=" waypoint animation_scale">
-
-			<p class="ml20 ml10-mobile waypoint animation_right">SALA COMERCIAL</p>
-			<hr class=" waypoint animation_scale">
-
-			<a href="<?=LINK_WHATSAPP?>" target="_blank" class="btn padding-top:29px_windows mt70 mt30-tablet mt10-mobile waypoint animation_right"><span>FALE CONOSCO</span></a>
-			
+                <a href=""
+                   target="_blank"
+                   class="btn is-secondary mt50"
+                >
+                    <span class="primary-font">
+                        tenho interesse
+                    </span>
+                </a>
+            </div>
 		</div>
 	</div>
 
@@ -264,41 +243,34 @@ get_header();
 
 
 
+<?php
+    $lazerList = [
+        1  => 'Playground',
+        2  => 'Espaço Kids',
+        3  => 'Gourmet com private pool',
+        4  => 'Beauty Place',
+        5  => 'Sports Bar',
+        6  => 'Sala de Jogos',
+        7  => 'Academia',
+        8  => 'Salão de Festas',
+        9  => 'Pomar',
+        10 => 'Bar molhado',
+        11 => 'Piscina adulto',
+        12 => 'Piscina infantil',
+        13 => 'Prainha',
+        14 => 'Terraço',
+    ];
+?>
 
-<section class="section-lazer pt40 pt20-mobile pb50-mobile" id="lazer">
+<section class="section-lazer pb35 pt50 pt20-mobile pb50-mobile" id="lazer">
 
 	<div class="wrap">
 
 		<div class="columns is-mobile is-multiline">
 			<div class="column is-5-widescreen is-5-desktop is-4-tablet is-7-mobile pr0-mobile">
-				<h2 class="mt10 mt0-mobile mb0-mobile waypoint animation_right has-text-right-mobile">LAZER</h2>
-			</div>
-
-
-			<div class="column is-4-widescreen is-4-desktop is-5-tablet is-hidden-mobile">
-				<h3 class="waypoint animation_right_d1">
-					EXPERIMENTE O<br>
-					LAZER TODOS OS<br>
-					DIAS, SEM RESERVAS.
-				</h3>
-			</div>
-
-
-			<div class="column is-5 is-hidden-tablet">
-				<h5 class="bg-secondary color-white is-inline-block pavimento
-				mt15 padding-top:15px_windows padding-bottom:6px_windows_mobile padding-top:10px_windows_mobile mt10-mobile pl20 pr20 has-text-centered">
-                    4º PAVIMENTO
-                </h5>
-			</div>
-
-
-			<div class="column is-3-tablet is-12-mobile has-text-right has-text-centered-mobile waypoint animation_right_d2">
-				<h5 class="bg-secondary color-white is-inline-block mb10 padding-top:15px_windows pl40 pr40
-				 pl30-tablet pr30-tablet has-text-centered is-hidden-mobile">
-					4º PAVIMENTO
-				</h5>
-
-				<h4>806,51 M²</h4>
+				<h2 class="mt10 big mt0-mobile mb0-mobile pl15 waypoint animation_right has-text-right-mobile">
+                    o lazer
+                </h2>
 			</div>
 		</div>
 
@@ -307,15 +279,16 @@ get_header();
 
 
 
-	<div class="wrap wide mt20 mt5-mobile">
+	<div class="wrap mt30 mt5-mobile">
 
 		<div class="columns is-mobile is-multiline">
-			<div class="column is-8-widescreen is-7-desktop is-12-tablet is-12-mobile pb0-mobile">
-				<picture>
-					<source srcset="<?=IMG?>planta-lazer.webp" media="(max-width: 578px)">
-					<source srcset="<?=IMG?>planta-lazer.webp" media="(min-width: 579px)">
-					<img src="<?=IMG?>planta-lazer.webp" alt="" class="is-block waypoint animation_left">
-				</picture>
+			<div class="column is-9-widescreen is-7-desktop is-12-tablet is-12-mobile pb0-mobile">
+				<figure class="is-relative">
+                    <img src="<?=IMG.'folha-background-2.webp'?>" class="folha-background waypoint animation_left" alt="">
+                    <picture class="planta-lazer">
+                        <img src="<?=IMG?>planta-lazer.webp" alt="" class="is-block waypoint animation_left">
+                    </picture>
+                </figure>
 
 				<div class="has-text-right is-hidden-tablet bt-show-itens-lazer">
 					<img src="<?=IMG?>icons/zoom.svg" alt="" class="mt15 waypoint animation_left">
@@ -323,151 +296,30 @@ get_header();
 			</div>
 
 
-			<div class="column is-4-widescreen is-5-desktop is-12-tablet is-12-mobile mt70 mt20-tablet pl30 pl15-mobile box-itens-lazer">
+			<div class="column is-3-widescreen lazer-block">
 
-				<h6 class="bg-primary color-white is-inline-block padding-top:15px_windows
-				 pb5-mobile has-text-centered waypoint animation_right ios-fix"
-                >
-                    PLAZA BEACH
-                </h6>
+				<h3 class="bg-primary is-inline-block  pb5-mobile  waypoint animation_right ">
+                    pavimento de lazer <br>
+                    completo integrado <br>
+                    com a natureza
+                </h3>
 
-				<div class="columns is-mobile mt20 mb0-mobile">
-					<div class="column is-6 pb0-mobile waypoint animation_right">
+				<div class="lazer-list ">
 
-						<div class="columns is-mobile itens mb0">
-							<div class="column is-narrow pr0"><div class="num"><p class="top:57%_windows">1</p></div></div>
-							<div class="column pl5-notebook">DECK PISCINA - 31,65 M²</div>
-						</div>
+                    <ul>
+                        <?php foreach($lazerList as $i => $lazer): ?>
+                            <li class="waypoint animation_right">
+                                <span class="number">
+                                    <?=$i?>
+                                </span>
+                                <p><?=$lazer?></p>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
 
-						<div class="columns is-mobile  itens mb0">
-							<div class="column is-narrow pr0"><div class="num"><p class="top:57%_windows">2</p></div></div>
-							<div class="column">PISCINA INFANTIL - 16,79 M²</div>
-						</div>
-
-					</div>
-
-					<div class="column is-6 pb0-mobile waypoint animation_right_d2">
-						
-						<div class="columns is-mobile  itens mb0">
-							<div class="column is-narrow pr0"><div class="num"><p class="top:57%_windows">3</p></div></div>
-							<div class="column pl5-notebook">PISCINA ADULTO - 72,67 M²</div>
-						</div>
-
-						<div class="columns is-mobile  itens mb0">
-							<div class="column is-narrow pr0"><div class="num"><p class="top:57%_windows">4</p></div></div>
-							<div class="column pl5-notebook">LOUNGE EXTERNO - 122,49 M²</div>
-						</div>
-
-					</div>
 				</div>
-
-
-
-
-
-
-
-
-
-				<div class="columns is-mobile mt20 mt0-mobile">
-					<div class="column is-6 waypoint animation_right">
-
-						<div class="columns is-mobile itens mb0">
-							<div class="column is-narrow pr0"><div class="num"><p class="top:57%_windows">5</p></div></div>
-							<div class="column">SALÃO GOURMET - 54,29 M²</div>
-						</div>
-
-						<div class="columns is-mobile itens mb0">
-							<div class="column is-narrow pr0"><div class="num"><p class="top:57%_windows">6</p></div></div>
-							<div class="column">JOGOS - 42,25 M²</div>
-						</div>
-
-						<div class="columns is-mobile itens mb0">
-							<div class="column is-narrow pr0"><div class="num"><p class="top:57%_windows">7</p></div></div>
-							<div class="column">ESPAÇO BEAUTY - 15,93 M²</div>
-						</div>
-
-						<div class="columns is-mobile itens mb0">
-							<div class="column is-narrow pr0"><div class="num"><p class="top:57%_windows">8</p></div></div>
-							<div class="column">ACADEMIA - 63,46 M²</div>
-						</div>
-
-						<div class="columns is-mobile itens mb0">
-							<div class="column is-narrow pr0"><div class="num"><p class="top:57%_windows">9</p></div></div>
-							<div class="column">SAUNA SECA - 4,79 M²</div>
-						</div>
-
-					</div>
-					
-					<div class="column is-6 waypoint animation_right_d2">
-						
-						<div class="columns is-mobile itens mb0">
-							<div class="column is-narrow pr0"><div class="num"><p class="top:57%_windows">10</p></div></div>
-							<div class="column">PISCINA AQUECIDA - 41,53 M²</div>
-						</div>
-
-						<div class="columns is-mobile itens mb0">
-							<div class="column is-narrow pr0"><div class="num"><p class="top:57%_windows">11</p></div></div>
-							<div class="column">BRINQUEDOTECA - 15,48 M²</div>
-						</div>
-
-						<div class="columns is-mobile itens mb0">
-							<div class="column is-narrow pr0"><div class="num"><p class="top:57%_windows">12</p></div></div>
-							<div class="column">SALÃO DE FESTAS - 59,60 M²</div>
-						</div>
-
-						<div class="columns is-mobile itens mb0">
-							<div class="column is-narrow pr0"><div class="num"><p class="top:57%_windows">13</p></div></div>
-							<div class="column">APOIO PISCINA - 10,41 M²</div>
-						</div>
-
-					</div>
-				</div>
-
-
-
-
-
-
-				<h6 class="bg-primary padding-top:15px_windows color-white is-inline-block mt40 ios-fix mt10-mobile pb5-mobile has-text-centered waypoint animation_right">
-                    PLAZA GARDEN
-                </h6>
-
-				<div class="columns is-mobile mt20">
-					<div class="column is-6 waypoint animation_right">
-
-						<div class="columns is-mobile itens mb0">
-							<div class="column is-narrow pr0"><div class="num"><p class="top:57%_windows">14</p></div></div>
-							<div class="column">PLAYGROUND - 35,44 M²</div>
-						</div>
-
-						<div class="columns is-mobile itens mb0">
-							<div class="column is-narrow pr0"><div class="num"><p class="top:57%_windows">15</p></div></div>
-							<div class="column">FIREPLACE - 13,35 M²</div>
-						</div>
-
-					</div>
-
-					<div class="column is-6 waypoint animation_right_d2">
-						
-						<div class="columns is-mobile itens mb0">
-							<div class="column is-narrow pr0"><div class="num"><p class="top:57%_windows">16</p></div></div>
-							<div class="column">PRAÇA - 142,54 M²</div>
-						</div>
-
-						<div class="columns is-mobile itens mb0">
-							<div class="column is-narrow pr0"><div class="num"><p class="top:57%_windows">17</p></div></div>
-							<div class="column">ESPAÇO FITNESS - 38,37 M²</div>
-						</div>
-
-					</div>
-				</div>
-
 
 			</div>
-
-
-			
 
 		</div>
 
@@ -510,7 +362,7 @@ get_header();
 
 
 
-<section class="section-galeria pt10 pb30 pl70 pr70  pl60-tablet pr60-tablet   pl0-mobile pr0-mobile">
+<section class="section-galeria pt10 pb80 pl60 pr60  pl60-tablet pr60-tablet   pl0-mobile pr0-mobile">
 	<div class="columns is-mobile is-multiline is-variable is-1-mobile" style="<?= !$MOBILE ? 'margin: 0 auto; max-width: 1920px;' : ''; ?>">
 		
 		<?php foreach ($qGaleria1 as $rs) { $IMG_WEBP = altera_ext_webp(HTTP_UPLOADS_IMG."tb-".$rs->arquivo); ?>
@@ -546,7 +398,7 @@ get_header();
 
 
 
-<section class="section-plaza is-relative pb0" id="plaza-beach" >
+<section class="section-plaza is-relative pt0 pb0" id="plaza-beach" >
 
 	<picture>
 		<source srcset="<?=IMG?>bg-piscina-mobile.webp" media="(max-width: 578px)">

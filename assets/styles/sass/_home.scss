@@ -1,21 +1,38 @@
 .section-intro{
   background: url(../../img/bg-intro.webp) center top;
+  overflow: hidden;
 
-  img{ max-width: 908px; }
+  img{ max-width: 930px; }
 
   .sun{
     @include absolute($t: 46%, $l: 1px);
     @include size(116px);
   }
 
-  p{
-    font-size: 1.5em;
+  p {
+    max-width: 470px;
   }
 
   h2 {
 
   }
 
+  .folha-background {
+    position: absolute;
+    bottom: 0;
+    left: 381px;
+  }
+
+
+  figure {
+    position: relative;
+
+    .clarus-logo {
+      position: absolute;
+      top:  48px;
+      left: 50px;
+    }
+  }
 
 }
 
@@ -25,112 +42,147 @@
   background: url(../../img/bg-texture-light.webp);
   letter-spacing: 0.5em;
 
-  .all-contents {
-    gap: 4vw;
+
+  .slide-content {
+    display: flex;
+
+    .slide-item {
+      max-width: 981px;
+      width: 100%;
+      min-width: 0;
 
 
-    // Smartphone
-    @media(max-width: 578px){
-      gap: unset !important;
+      .folha {
+        position: absolute;
+        bottom: 47.7%;
+        right: -40px;
+        z-index: 5;
+      }
+
+    }
+
+
+    .slide-description {
+      min-width: 450px;
+      display: flex;
+      justify-content: flex-end;
+      width: 465px;
+
+
+      > div {
+        color: $light-color-2;
+
+        h2 {
+          color: $light-color-2;
+          margin-bottom: 45px;
+        }
+
+        p {
+          font-weight: 400;
+          color: $light-color-2;
+        }
+
+        hr {
+          height: 3px;
+          width: 115px;
+          margin-bottom: 40px;
+          background-color: $light-color-2;
+        }
+
+
+      }
     }
   }
+
 
   .owl-carousel {
     .owl-item .item{
     }
 
     img {
-      max-height: 863px;
       object-fit: cover;
+      max-width: unset;
     }
   }
 
-  hr{
-    width: 45px;
-    background-color: $light-color;
-    height: 1px;
-    margin-top: 10px !important;
-    margin-bottom: 10px !important;
-  }
-
-  p {
-    @include fs-vw(1.4);
-    margin-left: 20px !important;
-  }
 }
 
 
 
 .section-lazer{
+  background: #768976;
 
-  background: url(../../img/bg-lazer.webp) center bottom no-repeat;
+  .planta-lazer {
+    position: relative;
+    right: 25px;
+  }
 
   h2{
-    font-weight: 200;
-    @include fs-vw(10.2);
-    line-height: 1;
-    letter-spacing: .2em;
+
+    color: $light-color-2;
+    margin-bottom: 0;
   }
 
   h3{
-    // font-weight: 200;
-    font-size: 1.7em;
-    letter-spacing: .4em;
-    line-height: 2.2;
+    line-height: 1.564 !important;
+    color: $light-color-2;
+    margin-bottom: 60px;
   }
 
-  h4{
-    font-weight: 200;
-    @include fs-vw(5.8);
-    line-height: 1;
-    letter-spacing: .0em;
-  }
+.lazer-block {
+  margin-top: -50px;
+  position: relative;
+  right: 50px;
+}
 
-  h5{
-    font-size: 1.6em;
-    line-height: 1;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-  h6{
-    font-size: 1.4em;
-    line-height: 0.6;
-    font-feature-settings: "liga", "kern";
-    box-sizing: border-box !important;
-    padding: 11px 20px 10px 20px;
-
+  figure .folha-background {
+    position: absolute;
+    top: -170px;
+    right: 60px;
   }
 
 
+  div.lazer-list {
 
-  .itens{
-    font-size: 1.1em;
+    ul {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+    }
 
-    .num{
-      //line-height: 1;
-      font-size: .9em;
-      line-height: .9em;
-      @include size(25px);
-      border-radius: 50%;
-      border: 1px solid $primary-color;
-      position: relative;
+    li {
+      display: flex;
+      align-items: center;
 
-      p{
-        position: absolute;
-        top: 46%;
-        right: 50%;
-        transform: translate(50%, -50%);
-        transform-origin: center;
+      span.number {
+        padding: .25rem;
+        height: 25.34px;
+        width: 25.34px;
+        min-width: unset;
+        background: $light-color-2;
+        font-size: 15px;
+        margin-right: 10px;
+        color: $primary-color;
+        font-weight: 700;
+
+      }
+
+      p {
+        font-weight: 500;
+        color: $light-color-3;
 
       }
     }
   }
+
 }
 
 
 
 .section-galeria{
+  background: $primary-color;
+  
+  
   .item{
     a{
       display: block;
@@ -180,7 +232,7 @@
     font-weight: 300;
     width: 100%;
     letter-spacing: .4em;
-    color: $lighter-color;
+    color: $light-color;
   }
 
 
@@ -422,7 +474,11 @@
 // Notebook
 @media only screen and (min-width: 1025px) and (max-width: 1499px) {
 
-  .section-block-2 {
+.section-block-2 {
+    .slide-content .slide-item {
+      max-width: 700px;
+    }
+
     .all-contents {
       justify-content: space-between !important;
       flex-wrap: nowrap !important;
@@ -435,6 +491,8 @@
 
 
   }
+
+
 
   .section-lazer {
     .box-itens-lazer {

@@ -79,9 +79,22 @@
   }
 
   &.is-secondary{
-    background: $secondary-color;
-    border-color: $secondary-color;
-    padding: 19px 58px 19px;
+    background: $light-color-2;
+    border-color: $light-color-2;
+    padding: 31px 70px 27px;
+
+
+
+    span {
+      color: $root-color;
+      letter-spacing: 0;
+      font-weight: 600;
+    }
+
+
+    &:hover {
+      span { color: $light-color-2; }
+    }
   }
 }
 

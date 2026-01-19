@@ -104,7 +104,7 @@ $pg = $_SEO["permalink"];
 
 				<div class="columns is-mobile">
 
-					<div class="column is-3-tablet is-4-mobile pr0 waypoint animation_left_dd1">
+					<div class="column is-4-widescreen is-3-tablet is-4-mobile pr0 waypoint animation_left_dd1">
 						<a href="<?=HTTP?>" title="<?=EMPRESA?>">
 							<img src="<?=IMG?>main-logo.webp" alt="logo <?=EMPRESA?>" class="logo is-hidden-mobile">
 						</a>
@@ -115,7 +115,7 @@ $pg = $_SEO["permalink"];
 					</div>
 
 
-					<div class="column is-5 pr20 is-relative is-hidden-mobile">
+					<div class="column is-4 pr20 is-relative is-hidden-mobile">
 					<!--
 						<nav class="links font-primary waypoint animation_right_dd1 animated is-hidden-touch">
 							<a href="#empreendimento" class="smooth-scroll-link" data-smooth-time-link="3000">O Empreendimento</a>

@@ -29,10 +29,10 @@
 
 html { scroll-behavior: smooth; }
 body { 
-   font: 62.5% 'acumin-pro', sans-serif;
+   font: 62.5% $primary-font, sans-serif;
    font-weight: 500;
    color: $root-color;
-   background: $lighter-color;
+   background: $light-color;
    line-height: 2.1;
    // letter-spacing: 0.05em;
    overflow-x: hidden;
@@ -49,7 +49,8 @@ body {
 */
 
 .wrap{
-   max-width: 1180px;
+   //max-width: 1107px;
+   max-width: 1165px;
    width: 100%;
    margin: 0 auto;
    padding: 0 15px;
