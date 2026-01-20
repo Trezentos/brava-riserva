@@ -112,6 +112,9 @@
 .section-lazer{
   background: #768976;
 
+
+
+
   .planta-lazer {
     position: relative;
     right: 25px;
@@ -175,6 +178,7 @@
     }
   }
 
+
 }
 
 
@@ -221,10 +225,116 @@
   }
 }
 
+section.video {
+  width: 100%;
+  background-color: $light-color-2 ;
+
+  .container-video, iframe {
+    width: 100%;
+    aspect-ratio: 1236 / 696;
+    height: auto;
+    z-index: 4;
+    // Smartphone
+    @media(max-width: 578px){
+      aspect-ratio: 1236 / 696;
+
+
+    }
+
+  }
+
+  .video-container {
+    z-index: -1;
+  }
+
+  .cover-img {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background-color: #000000;
+      opacity: 0.4;
+      z-index: 3;
+      transition: 0.5s;
+
+      // eu quero diminuir essa opacity com o hover lá de baixo comentado
+    }
+
+
+
+  }
+
+  .bt-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    border: 1px solid white;
+    width: 113px;
+    height: 113px;
+    border-radius: 50%;
+    margin: 0;
+    padding: 36px 41px 26px;
+
+    i {
+      font-size: 50px;
+      color: white;
+      z-index: 10;
+      position: relative;
+    }
+
+    &:hover {
+      border-color: white;
+      background: rgba(255, 255, 255, 0.4);
+
+      // com esse hover
+
+      i {
+        color: white;
+      }
+    }
+  }
+
+}
 
 
 
 .section-plaza{
+
+  &#plaza-beach  { overflow: hidden; }
+
+  picture {
+    position: relative;
+    margin-top: -200px;
+    display: block;
+    //&::after {
+    //  content: '';
+    //  position: absolute;
+    //  inset: 0;
+    //  pointer-events: none;
+    //  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 0.15) 60%, rgba(0, 0, 0, 0) 100%);
+    //}
+  }
+
+
 
   .txt{
     @include absolute($t: 155px);
@@ -237,26 +347,26 @@
 
 
   .bg-texture{
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 90%, $l-gray 90%), url(../../img/bg-texture.webp);
-
-    .owl-theme .owl-nav{
-      margin: 0;
-    }
+    background-color: $light-color-2;
   }
 
-  .box-p{
-    margin-top: -180px;
-    line-height: 1.65;
-
-    .svg{
-      max-width: 210px;
-    }
+  h2 span{
+    left: 5px;
+    position: relative;
   }
 
   .main-img {
     margin: 0 auto;
 
   }
+
+  .folha-vertical {
+    position: absolute;
+    right: -212px;
+    bottom: 332px;
+    z-index: -1;
+  }
+
 
 }
 
@@ -265,6 +375,7 @@
 
 
 .section-plantas{
+  background-color: $light-color-2;
 
   hr{ height: 2px; }
 
@@ -286,6 +397,7 @@
       span{
         position: relative;
         z-index: 1;
+        color: white;
       }
 
       // &:hover{
@@ -294,8 +406,8 @@
 
       &:after{
         content:'';
-        background: $secondary-color;
-        @include size(0, 100%);
+        background: $primary-color;
+        @include size(100%, 100%);
         @include absolute($t: 0, $l: 0, $z: 0);
         @include transition(1s);
       }
@@ -306,6 +418,8 @@
 
       &:after{
         width: 100%;
+        background: $secondary-color;
+
       }
     }
   }
@@ -630,6 +744,10 @@
     .box-p{
       margin-top: -80px;
     }
+
+
+
+
   }
 
 

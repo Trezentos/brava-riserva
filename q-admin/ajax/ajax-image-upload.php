@@ -61,8 +61,8 @@ if (isset($_FILES['file']) && $_FILES['file']['error'] == 0)
 				$wTb  = 575;
 				$hTb  = 315;
 
-				// $wMd  = 1920;
-				// $hMd  = 760;
+				$wMd  = 1170;
+				$hMd  = 650;
 			break;
 
 			case 'obras' :

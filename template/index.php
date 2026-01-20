@@ -22,19 +22,24 @@ $qGaleria2 = $db->get_results("SELECT * FROM ".$tables['GALERIA_IMG']." WHERE at
 if( !IS_LIGHTHOUSE )
 {
 	add_style([
+        'styles/css/swiper-bundle.min.css',
 		'styles/css/owl.carousel.min.css',
 		'styles/css/owl.theme.default.min.css',
 		'styles/css/jquery.fancybox.min.css'
 	]);
 
 	add_javascript([
+        'swiper-bundle.min.js',
 		'owl.carousel.min.js',
 		'jquery.maskedinput.js',
 		'jquery.cycle2.min.js',
 		'jquery.fancybox.min.js',
         'ios.js',
+        'video-config.js',
+        'galeria-slide.js'
 	]);
 }
+
 
 
 get_header();
@@ -348,54 +353,43 @@ get_header();
 
 </section>
 
+<section class="section-carousel pt0 pb0 is-relative pt80-mobile pb80-mobile pt100-notebook pb50-notebook pt100-tablet " id="galeria">
+    <div class="wrap pl50-mobile pr50-mobile">
+        <img src="<?=IMG.'paper-background-carousel.webp'?>" class="paper-background " alt="">
 
+        <div class="columns">
+            <div class="column is-5"> </div>
+            <div class="column is-9">
+                <hr class="ml15 ml45-mobile ">
+            </div>
+        </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-<section class="section-galeria pt10 pb80 pl60 pr60  pl60-tablet pr60-tablet   pl0-mobile pr0-mobile">
-	<div class="columns is-mobile is-multiline is-variable is-1-mobile" style="<?= !$MOBILE ? 'margin: 0 auto; max-width: 1920px;' : ''; ?>">
-		
-		<?php foreach ($qGaleria1 as $rs) { $IMG_WEBP = altera_ext_webp(HTTP_UPLOADS_IMG."tb-".$rs->arquivo); ?>
-		
-            <div class="column is-4-tablet is-6-mobile item  pb0-mobile pt10-mobile  waypoint animation_bottom">
-                <a class="fancybox" data-fancybox="gallery" data-caption='<?=($rs->legenda?$rs->legenda:EMPRESA); ?>'  href="<?=HTTP_UPLOADS_IMG.'lg-'.$rs->arquivo; ?>" title="<?=($rs->legenda?$rs->legenda:EMPRESA); ?>">
-
-                    <div class="overlay"></div>
-                    <div class="legenda is-uppercase font-secondary is-hidden-mobile"><?=$rs->legenda?></div>
-
-                    <picture>
-                        <source srcset="<?=$IMG_WEBP?>" type="image/webp">
-                        <source srcset="<?=HTTP_UPLOADS_IMG.'tb-'.$rs->arquivo;?>" type="image/jpeg">
-                        <img class="is-block" src="<?=$IMG_WEBP?>" alt="<?=($rs->legenda?$rs->legenda:EMPRESA); ?>">
-                    </picture>
-                </a>
+        <div class="swiper slide-imoveis swiper-imoveis mt60 mb150 mb0-tablet mt15-mobile mb10-mobile">
+            <div class="swiper-wrapper">
+                <?php foreach ($qGaleria1 as $card): ?>
+                    <div class="swiper-slide" data-title="<?= $card->legenda; ?>">
+                        <a
+                                href="<?=  HTTP_UPLOADS_IMG.'lg-'.$card->arquivo; ?>"
+                                data-fancybox="galeria-1"
+                                data-caption="<?= $card->legenda; ?>"
+                        >
+                            <h2><?= $card->legenda; ?></h2>
+                            <figure class="image-container">
+                                <img
+                                        src="<?= HTTP_UPLOADS_IMG.($MOBILE ? 'tb-' : 'md-').$card->arquivo; ?>"
+                                        alt="<?= $card->legenda; ?>"
+                                >
+                            </figure>
+                        </a>
+                    </div>
+                <?php endforeach; ?>
             </div>
 
-		<?php } ?>
+            <div class="swiper-scrollbar"></div>
+        </div>
 
-	</div>
+    </div>
 </section>
-
-
-
-
-
-
-
-
-
-
-
 
 
 <section class="section-plaza is-relative pt0 pb0" id="plaza-beach" >
@@ -406,60 +400,44 @@ get_header();
 		<img src="<?=IMG?>bg-piscina.webp" alt="" class="is-block js-parallax-z main-img" data-zoom="15">
 	</picture>
 
-	<div class="txt font-secondary has-text-centered pl60-mobile pr60-mobile  waypoint animation_bottom">
-		<div class="js-parallax" data-start="0" data-end="100">O VERDADEIRO LUXO ESTÁ NA SIMPLICIDADE DE UM MERGULHO SEM PRESSA</div>
-	</div>
+</section>
 
+<section class="video  mb0 pb0 pt30">
+    <div class="wrap pr0-mobile pl0-mobile ">
+        <div class="container-video is-relative  ">
 
+            <div class="placeholder-video ">
+                <button id="play-button" class="btn is-white bt-play " title="Reproduzir vídeo" aria-label="Reproduzir vídeo">
+                    <i class="fa fa-play"></i>
+                </button>
+            </div>
+            <div class=" animation_top animated">
+                <div class="video-container "  data-video="y5XuR2BWe0g"> </div>
 
+                <!--    			<img src="--><?php //=IMG.'video-cover.webp'?><!--" class="" alt="">-->
 
+                <div class="cover-img">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="<?=IMG.'cover-img.webp'?>">
+                        <img src="<?=IMG.'cover-img.webp'?>" class="" alt="">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-
-
-	
-
-
-
-
+<section class="section-plaza is-relative pt0 pb0 ">
 
 	<div class="bg-texture is-relative">
 		<div class="wrap is-relative z-index-1">
 
 			<div class="columns is-multiline is-mobile mt0-mobile is-align-items-flex-end">
-				<div class="column is-4-tablet is-12-mobile waypoint animation_left pb0-mobile pr5 pl10-mobile pr10-mobile">
-					<div class="box-p bg-ll-gray pt60 pl70 pr60  pt40-tablet pl40-tablet pr40-tablet pl60-mobile ">
-						<img src="<?=IMG?>plaza-beach.svg" alt="logo" class="svg ml10">
 
-						<p class="mt30 has-text-weight-light pl20 pr20">
-							O Plaza Beach é onde o horizonte do mar encontra o conforto absoluto. Uma extensão dos apartamentos destinada ao lazer e ao descanso, composta por ambientes com uma bela vista para o mar, que podem ser acessados sem reserva.
-						</p>
-
-						<a href="<?=LINK_WHATSAPP?>" class="btn padding-top:29px_windows is-big-mob mt30 mb50"><span>FALE CONOSCO</span></a>
-					</div>
-				</div>
-
-
-				<div class="column is-8-tablet is-12-mobile waypoint animation_right_d2 pl20 pl30-tablet pl10-mobile pr10-mobile pt0-mobile  mt0-mobile">
-					<div class="slide-plaza-beach owl-carousel owl-theme">
-						<?php for ($i=1; $i < 5; $i++) { ?>
-
-						<div class="item">
-							<a href="<?=IMG?>plaza-beach/0<?=$i?>-lg.webp" class="fancybox" data-fancybox="gallery-2">
-								<img class="is-block" src="<?=IMG?>plaza-beach/0<?=$i?>.webp" alt="">
-							</a>
-						</div>
-
-						<?php } ?>
-					</div>
-				</div>
 			</div>
 
 
-
-
-
-
-			<div class="columns is-multiline is-mobile mt50 mt20-mobile">
+			<div class="columns is-multiline is-mobile mt75 mt20-mobile">
 				<div class="column is-8-tablet is-12-mobile waypoint animation_right_d2 pr20 pl10-mobile pr10-mobile is-order-1-mobile pt0-mobile">
 					<div class="slide-plaza-beach owl-carousel owl-theme">
 						<?php for ($i=1; $i < 5; $i++) { ?>
@@ -477,20 +455,22 @@ get_header();
 
 				<div class="column is-4-tablet is-12-mobile waypoint animation_left is-order-0-mobile pl5 pl10-mobile pr10-mobile pb0-mobile" id="plaza-garden">
 					<div class="box-p bg-ll-gray mt0 pt60 pl70 pr60  pt40-tablet pl40-tablet pr40-tablet  pl60-mobile">
-						<img src="<?=IMG?>plaza-garden.svg" alt="logo" class="ml10 svg">
+                        <h2 class="medium">Ana Holzer</h2>
+
+                        <h2 class="medium">autora do pro<span>j</span>eto de paisagismo</h2>
 
 						<p class="mt30 has-text-weight-light pl20 pr20">
-							No Plaza Garden, a natureza se revela em um cenário onde o verde contorna suavemente cada curva. Esta praça particular é projetada com um paisagismo envolvente, com ambientes que reforçam a conexão com a natureza, trazendo harmonia e frescor para o dia a dia. 
+							No Plaza Garden, a natureza se revela em um cenário onde o verde contorna suavemente cada curva. Esta praça particular é projetada com um paisagismo envolvente, com ambientes que reforçam a conexão com a natureza, trazendo harmonia e frescor para o dia a dia.
 						</p>
 
 						<a href="<?=LINK_WHATSAPP?>" class="btn padding-top:29px_windows is-big-mob mt30 mb50"><span>FALE CONOSCO</span></a>
 					</div>
+
+                    <img src="<?=IMG.'folha-background-vertical.webp'?>" class="folha-vertical" alt="">
 				</div>
 			</div>
 
 		</div>
-
-
 
 		<picture class="is-relative z-index-0">
 			<source srcset="<?=IMG?>bg-area-mobile.webp" media="(max-width: 578px)">
@@ -518,13 +498,13 @@ get_header();
 
 
 
-<section class="section-plantas bg-l-gray " id="plantas" style="<?=$MOBILE ? 'padding-bottom: 110px;' : '';?>">
+<section class="section-plantas " id="plantas" style="<?=$MOBILE ? 'padding-bottom: 110px;' : '';?>">
 	<div class="wrap wide pl10-mobile pr10-mobile">
 
 		<div class="columns is-centered is-mobile">
 			<div class="column is-one-fifth-tablet is-2-mobile pl0 pr0 pr0-mobile"><hr class="is-full mt40 mt30-tablet mt25-mobile waypoint animation_scale_d1"></div>
 			<div class="column is-4-tablet is-8-mobile">
-				<h2 class="is-big has-text-centered mb0-mobile waypoint animation_bottom">APARTAMENTOS</h2>
+				<h2 class="is-big has-text-centered mb0-mobile waypoint animation_bottom">apartamentos</h2>
 			</div>
 			<div class="column is-one-fifth-tablet is-2-mobile pl0 pr0 pl0-mobile"><hr class="is-full mt40 mt30-tablet mt25-mobile waypoint animation_scale_d1"></div>
 		</div>
@@ -536,11 +516,11 @@ get_header();
 		<div class="columns is-centered is-mobile mb0-mobile">
 			<div class="column is-9-tablet is-12-mobile">
 				<div class="plantas-nav is-flex is-justify-content-space-between mt20 mt10-mobile is-relative waypoint animation_bottom" id="plantas-nav">
-					<a class="padding-top:12px_windows" ><span>TIPO 1</span></a>
-					<a class="padding-top:12px_windows" ><span>TIPO 2</span></a>
-					<a class="padding-top:12px_windows" ><span>TIPO 3</span></a>
-					<a class="padding-top:12px_windows" ><span>COBERTURA 1</span></a>
-					<a class="padding-top:12px_windows" ><span>COBERTURA 2</span></a>
+					<a class="" ><span>final 1</span></a>
+					<a class="" ><span>final 2</span></a>
+					<a class="" ><span>final 3</span></a>
+					<a class="" ><span>final 4</span></a>
+					<a class="" ><span>final 5</span></a>
 				</div>
 			</div>
 		</div>
@@ -630,48 +610,43 @@ get_header();
 </section>
 
 
+<section class="section-carousel pt0 pb0 is-relative pt80-mobile pb80-mobile pt100-notebook pb50-notebook pt100-tablet " id="galeria">
+    <div class="wrap pl50-mobile pr50-mobile">
+        <img src="<?=IMG.'paper-background-carousel.webp'?>" class="paper-background " alt="">
 
+        <div class="columns">
+            <div class="column is-5"> </div>
+            <div class="column is-9">
+                <hr class="ml15 ml45-mobile ">
+            </div>
+        </div>
 
+        <div class="swiper slide-imoveis swiper-imoveis mt60 mb150 mb0-tablet mt15-mobile mb10-mobile">
+            <div class="swiper-wrapper">
+                <?php foreach ($qGaleria1 as $card): ?>
+                    <div class="swiper-slide" data-title="<?= $card->legenda; ?>">
+                        <a
+                                href="<?=  HTTP_UPLOADS_IMG.'lg-'.$card->arquivo; ?>"
+                                data-fancybox="galeria-1"
+                                data-caption="<?= $card->legenda; ?>"
+                        >
+                            <h2><?= $card->legenda; ?></h2>
+                            <figure class="image-container">
+                                <img
+                                        src="<?= HTTP_UPLOADS_IMG.($MOBILE ? 'tb-' : 'md-').$card->arquivo; ?>"
+                                        alt="<?= $card->legenda; ?>"
+                                >
+                            </figure>
+                        </a>
+                    </div>
+                <?php endforeach; ?>
+            </div>
 
+            <div class="swiper-scrollbar"></div>
+        </div>
 
-
-
-
-
-
-
-
-<section class="section-galeria bg-l-gray pt10 pl70 pr70  pl0-mobile pr0-mobile">
-	<div class="columns is-mobile is-multiline is-variable is-1-mobile" style="<?= !$MOBILE ? 'margin: 0 auto; max-width: 1920px;' : ''; ?>">
-		
-		<?php foreach ($qGaleria2 as $rs) { $IMG_WEBP = altera_ext_webp(HTTP_UPLOADS_IMG."tb-".$rs->arquivo); ?>
-		
-		<div class="column is-4-tablet is-6-mobile pb0-mobile pt10-mobile item waypoint animation_bottom">
-			<a class="fancybox" data-fancybox="gallery-4" data-caption='<?=($rs->legenda?$rs->legenda:EMPRESA); ?>'  href="<?=HTTP_UPLOADS_IMG.'lg-'.$rs->arquivo; ?>" title="<?=($rs->legenda?$rs->legenda:EMPRESA); ?>">
-
-				<div class="overlay"></div>
-				<div class="legenda is-uppercase font-secondary is-hidden-mobile"><?=$rs->legenda?></div>
-
-				<picture>
-					<source srcset="<?=$IMG_WEBP?>" type="image/webp">
-					<source srcset="<?=HTTP_UPLOADS_IMG.'tb-'.$rs->arquivo;?>" type="image/jpeg">
-					<img class="is-block" src="<?=$IMG_WEBP?>" alt="<?=($rs->legenda?$rs->legenda:EMPRESA); ?>">
-				</picture>
-			</a>
-		</div>
-
-		<?php } ?>
-
-	</div>
+    </div>
 </section>
-
-
-
-
-
-
-
-
 
 
 
@@ -686,78 +661,6 @@ get_header();
 			</div>
 			<div class="column is-4-tablet is-2-mobile pl20 pl0-mobile"><hr class="is-full mt40 mt30-tablet mt25-mobile waypoint animation_scale_d1"></div>
 		</div>
-
-
-
-
-		<?php
-
-		$aDif_1 = [
-			['hall-entrada.svg', 'Hall de entrada com pé-direito duplo'],
-			['porte-cochere.svg', 'Porte-cochère'],
-			['entrada-banhistas.svg', 'Entrada exclusiva para banhistas'],
-			['reconhecimento-facial.svg', 'Controle de entrada e saída por reconhecimento facial nas áreas comuns'],
-			['automacao-iluminacao.svg', 'Automação de iluminação, áudio, vídeo e climatização nas áreas comuns'],
-
-			['projeto-paisagistico.svg', 'Projeto paisagístico'],
-			['bar-piscina.svg', 'Bar de apoio na piscina'],
-			['hobby-box.svg', 'Hobby box'],
-			['gerador.svg', 'Gerador de energia'],
-			['piscina-coberta-aquecida.svg', 'Piscina coberta aquecida'],
-
-			['espreguicadeiras.svg', 'Terraço da piscina com espreguiçadeiras'],
-			['maquina-gelo.svg', 'Máquina de gelo'],
-			['sala-funcionarios.svg', 'Sala equipada para funcionários'],
-			['wi-fi.svg', 'Ambientes sociais com wi-fi'],
-			['areas-decoradas.svg', 'Áreas comuns entregues decoradas e equipadas'],
-
-			['bicicletario.svg', 'Bicicletário'],
-			['sauna.svg', 'Sauna'],
-			['pintura-epoxi.svg', 'Garagens com pintura em epóxi'],
-			['elevadores.svg', '3 elevadores, sendo 2 sociais e 1 de serviço'],
-			['irrigacao.svg', 'Jardins com irrigação automática'],
-		];
-
-
-		$aDif_2 = [
-			['medidores.svg', 'Medidores individuais de água, gás e energia'],
-			['tomada-usb.svg', 'Tomadas USB nas suítes e living'],
-			['banheiro.svg', 'Banheiro da suíte master com infraestrutura para 2 cubas'],
-			['aquecedor.svg', 'Infraestrutura para aquecedor e sistema de recirculação de água quente'],
-			['exaustao.svg', 'Área de serviço com exaustão para máquina de secar'],
-
-			['piso.svg', 'Piso vinílico nas suítes'],
-			['nicho.svg', 'Banheiro com nicho embutido'],
-			['persianas.svg', 'Suítes com persianas motorizadas integradas'],
-			['churrasqueira.svg', 'Churrasqueira a carvão com sistema de exaustão por dumper'],
-			['fechaduras.svg', 'Fechaduras biométricas nos apartamentos'],
-		];
-
-
-		$aDif_3 = [
-			['guarita.svg', 'Guarita totalmente equipada'],
-			['reconhecimento-facial.svg', 'Controle de entrada e saída por reconhecimento facial nas áreas comuns'],
-			['camera.svg', 'Sistema de monitoramento por câmeras'],
-			['delivery.svg', 'Delivery: Espaço específico para entrega de encomendas'],
-			['tag.svg', 'Dispositivo eletrônico de controle de acesso à piscina'],
-
-			['lixeira.svg', 'Lixeiras na garagem térrea com acesso interno'], 
-			['botao.svg', 'Botão de emergência para o desligamento da bomba da piscina do lazer'],
-		];
-
-
-		$aDif_4 = [
-			['lixeira-eco.svg', 'Depósito de resíduos comum e reciclável com lixeiras exclusivas para coleta seletiva'],
-			['agua-chuva.svg', 'Captação de água pluvial com tanque de retardo e aproveitamento da água da chuva'],
-			['sensores.svg', 'Sensores de presença para iluminação em áreas de circulação'],
-			['carro-eletrico.svg', '1 ponto por apartamento para carregamento de carro elétrico'],
-			['carregador-bike.svg', 'Ponto de carregamento para bicicletas e patinetes'],
-
-			['lamapada-led.svg', 'Iluminação full led'], 
-			['energia-solar.svg', 'Energia solar fotovoltaica']
-		];
-
-		?>
 
 
 		<div class="container-itens mt10 pl30-mobile pr30-mobile">
