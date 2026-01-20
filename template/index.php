@@ -38,6 +38,8 @@ if( !IS_LIGHTHOUSE )
         'video-config.js',
         'galeria-slide.js'
 	]);
+
+
 }
 
 
@@ -249,22 +251,25 @@ get_header();
 
 
 <?php
-    $lazerList = [
-        1  => 'Playground',
-        2  => 'Espaço Kids',
-        3  => 'Gourmet com private pool',
-        4  => 'Beauty Place',
-        5  => 'Sports Bar',
-        6  => 'Sala de Jogos',
-        7  => 'Academia',
-        8  => 'Salão de Festas',
-        9  => 'Pomar',
-        10 => 'Bar molhado',
-        11 => 'Piscina adulto',
-        12 => 'Piscina infantil',
-        13 => 'Prainha',
-        14 => 'Terraço',
-    ];
+$lazerList = [
+    1  => ['nome' => 'Playground',               'link' => 'playground-brava-riserva'],
+    2  => ['nome' => 'Espaço Kids',               'link' => 'espaco-kids-brava-riserva'],
+    3  => ['nome' => 'Gourmet com private pool',  'link' => 'gourmet-com-private-pool-brava-riserva'],
+    4  => ['nome' => 'Beauty Place',              'link' => 'beauty-place-brava-riserva'],
+    5  => ['nome' => 'Sports Bar',                'link' => 'sports-bar-brava-riserva'],
+
+
+
+    6  => ['nome' => 'Sala de Jogos',             'link' => 'sala-de-jogos-brava-riserva'],
+    7  => ['nome' => 'Academia',                  'link' => 'academia-brava-riserva'],
+    8  => ['nome' => 'Salão de Festas',           'link' => 'salao-de-festas-brava-riserva'],
+    9  => ['nome' => 'Pomar',                     'link' => 'pomar-brava-riserva'],
+    10 => ['nome' => 'Bar molhado',               'link' => 'bar-molhado-brava-riserva'],
+    11 => ['nome' => 'Piscina adulto',            'link' => 'piscina-adulto-brava-riserva'],
+    12 => ['nome' => 'Piscina infantil',          'link' => 'piscina-infantil-brava-riserva'],
+    13 => ['nome' => 'Prainha',                   'link' => 'prainha-brava-riserva'],
+    14 => ['nome' => 'Terraço',                   'link' => 'terraco-brava-riserva'],
+];
 ?>
 
 <section class="section-lazer pb35 pt50 pt20-mobile pb50-mobile" id="lazer">
@@ -312,12 +317,19 @@ get_header();
 				<div class="lazer-list ">
 
                     <ul>
-                        <?php foreach($lazerList as $i => $lazer): ?>
+                        <?php foreach ($lazerList as $i => $item): ?>
                             <li class="waypoint animation_right">
-                                <span class="number">
-                                    <?=$i?>
-                                </span>
-                                <p><?=$lazer?></p>
+                                <span class="number"><?= $i ?></span>
+                                <a
+                                    href="<?= IMG . 'lazer-areas/' . $item['link']; ?>"
+                                    data-fancybox="lazer-photos"
+                                    data-caption="<?= $item['nome']; ?>"
+                                >
+                                    <p>
+                                        <?= $item['nome']; ?>
+                                        <span>(Ver Foto)</span>
+                                    </p>
+                                </a>
                             </li>
                         <?php endforeach; ?>
                     </ul>
@@ -623,7 +635,7 @@ get_header();
 
         <div class="swiper slide-imoveis swiper-imoveis mt60 mb150 mb0-tablet mt15-mobile mb10-mobile">
             <div class="swiper-wrapper">
-                <?php foreach ($qGaleria1 as $card): ?>
+                <?php foreach ($qGaleria2 as $card): ?>
                     <div class="swiper-slide" data-title="<?= $card->legenda; ?>">
                         <a
                                 href="<?=  HTTP_UPLOADS_IMG.'lg-'.$card->arquivo; ?>"
