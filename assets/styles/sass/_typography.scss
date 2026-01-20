@@ -19,10 +19,19 @@ h1, h2{
     line-height: 1;
   }
 
+  &.bigger {
+    font-size: 66px;
+  }
+
   &.medium {
     font-size: 2.4em;
     line-height: 1.25;
 
+  }
+
+  &.smaller {
+    font-size: 18px;
+    line-height: 1.666;
   }
 
 }

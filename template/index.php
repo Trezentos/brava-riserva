@@ -78,7 +78,7 @@ get_header();
 				<div class="txt-banner waypoint animation_bottom_dd3 animated">
 					<div class="h1 secondary-font"><?=$rs->titulo?></div>
 
-					<?php if( $rs->link ){ ?>
+					<?php if( $rs->link && $rs->texto_cta ){ ?>
 					<a href="<?=$rs->link; ?>" target="<?=($rs->destino_cta=="_self"?"":"_blank"); ?>"
                        class="btn is-primary">
                         <span class="primary-font">
@@ -149,26 +149,18 @@ get_header();
 
 			<div class="column is-6-widescreen is-7-desktop is-5-tablet is-12-mobile pl60 pl40-tablet pl0-mobile pb0-mobile mt50-mobile is-relative">
 
-				<figure>
-                    <picture>
-                        <source srcset="<?=IMG?>img-intro.webp" media="(max-width: 578px)">
-                        <source srcset="<?=IMG?>img-intro.webp" media="(min-width: 579px)">
-                        <img src="<?=IMG?>img-intro.webp" alt="" class="img is-block waypoint animation_right_d1">
-                    </picture>
-                    <img src="<?=IMG.'clarus-logo.webp'?>" class="clarus-logo waypoint animation_top_d2" alt="">
-                </figure>
-
-				<span class="sun waypoint animation_scale_d2">
-					<img src="<?=IMG?>icons/folha.webp" alt="" >
-				</span>
-
+                <picture>
+                    <source srcset="<?=IMG?>img-intro.webp" media="(max-width: 578px)">
+                    <source srcset="<?=IMG?>img-intro.webp" media="(min-width: 579px)">
+                    <img src="<?=IMG?>img-intro.webp" alt="" class="img is-block waypoint animation_right_d1">
+                </picture>
 			</div>
 		</div>
 
-		
+
 	</div>
-    
-    
+
+
     <img src="<?=IMG.'folha-background.webp'?>" class="folha-background waypoint animation_bottom_d2" alt="">
 </section>
 
@@ -188,7 +180,6 @@ get_header();
  		
 	<div class="slide-content ">
 		<div class="slide-item is-relative">
-            <img src="<?=IMG.'icons/folha-branca.webp'?>" class="folha waypoint animation_left" alt="">
 			<div class="slide-galeria owl-carousel owl-theme waypoint animation_left">
 
 
@@ -205,12 +196,6 @@ get_header();
 			<div>
                 <h2>o empreendimento</h2>
                 <hr>
-                <h3 class="mb45">
-                    33 andares <br>
-                    6 apartamentos por andar <br>
-                    162 unidades
-                </h3>
-
                 <p>
                     Cinco elevadores <br>
                     Circuito fechado de câmeras <br>
@@ -224,14 +209,16 @@ get_header();
                     Pet place <br>
                 </p>
 
-                <a href=""
-                   target="_blank"
-                   class="btn is-secondary mt50"
-                >
-                    <span class="primary-font">
-                        tenho interesse
-                    </span>
-                </a>
+                <h2 class="medium mt65 mb35">
+                    a natureza <br>
+                    como arquitetura
+                </h2>
+
+                <p>
+                    O Brava Riserva nasceu com um propósito: criar uma <br>
+                    experiência de moradia onde a natureza não fosse <br>
+                    apenas paisagem, mas protagonista.
+                </p>
             </div>
 		</div>
 	</div>
@@ -252,27 +239,27 @@ get_header();
 
 <?php
 $lazerList = [
-    1  => ['nome' => 'Playground',               'link' => 'playground-brava-riserva'],
-    2  => ['nome' => 'Espaço Kids',               'link' => 'espaco-kids-brava-riserva'],
-    3  => ['nome' => 'Gourmet com private pool',  'link' => 'gourmet-com-private-pool-brava-riserva'],
-    4  => ['nome' => 'Beauty Place',              'link' => 'beauty-place-brava-riserva'],
-    5  => ['nome' => 'Sports Bar',                'link' => 'sports-bar-brava-riserva'],
+    1  => ['nome' => 'Playground',               'link' => 'playground-brava-riserva.jpg'],
+    2  => ['nome' => 'Espaço Kids',               'link' => 'espaco-kids-brava-riserva.jpg'],
+    3  => ['nome' => 'Gourmet com private pool',  'link' => 'gourmet-com-private-pool-brava-riserva.jpg'],
+    4  => ['nome' => 'Beauty Place',              'link' => 'beauty-place-brava-riserva.jpg'],
+    5  => ['nome' => 'Sports Bar',                'link' => 'sports-bar-brava-riserva.jpg'],
+    6  => ['nome' => 'Sala de Jogos',             'link' => 'sala-de-jogos-brava-riserva.jpg'],
+    7  => ['nome' => 'Academia',                  'link' => 'academia-brava-riserva.jpg'],
+    8  => ['nome' => 'Salão de Festas',           'link' => 'salao-de-festas-brava-riserva.jpg'],
+    9  => ['nome' => 'Pomar',                     'link' => 'pomar-brava-riserva.jpg'],
+    11 => ['nome' => 'Piscina adulto',            'link' => 'piscina-adulto-brava-riserva.jpg'],
 
-
-
-    6  => ['nome' => 'Sala de Jogos',             'link' => 'sala-de-jogos-brava-riserva'],
-    7  => ['nome' => 'Academia',                  'link' => 'academia-brava-riserva'],
-    8  => ['nome' => 'Salão de Festas',           'link' => 'salao-de-festas-brava-riserva'],
-    9  => ['nome' => 'Pomar',                     'link' => 'pomar-brava-riserva'],
-    10 => ['nome' => 'Bar molhado',               'link' => 'bar-molhado-brava-riserva'],
-    11 => ['nome' => 'Piscina adulto',            'link' => 'piscina-adulto-brava-riserva'],
+    10 => ['nome' => 'Bar molhado',               'link' => 'bar-molhado-brava-riserva.jpg'],
     12 => ['nome' => 'Piscina infantil',          'link' => 'piscina-infantil-brava-riserva'],
     13 => ['nome' => 'Prainha',                   'link' => 'prainha-brava-riserva'],
     14 => ['nome' => 'Terraço',                   'link' => 'terraco-brava-riserva'],
+
+
 ];
 ?>
 
-<section class="section-lazer pb35 pt50 pt20-mobile pb50-mobile" id="lazer">
+<section class="section-lazer pb125 pt50 pt20-mobile pb50-mobile" id="lazer">
 
 	<div class="wrap">
 
@@ -285,8 +272,6 @@ $lazerList = [
 		</div>
 
 	</div>
-
-
 
 
 	<div class="wrap mt30 mt5-mobile">
@@ -315,7 +300,6 @@ $lazerList = [
                 </h3>
 
 				<div class="lazer-list ">
-
                     <ul>
                         <?php foreach ($lazerList as $i => $item): ?>
                             <li class="waypoint animation_right">
@@ -327,7 +311,6 @@ $lazerList = [
                                 >
                                     <p>
                                         <?= $item['nome']; ?>
-                                        <span>(Ver Foto)</span>
                                     </p>
                                 </a>
                             </li>
@@ -340,43 +323,13 @@ $lazerList = [
 
 		</div>
 
-
-
-
-
-
-		<div class="columns is-mobile is-vcentered is-hidden-tablet">
-			<div class="column is-5 has-text-centered">
-				<img src="<?=IMG?>icons/meia-lua.svg" alt="" class="mt5 waypoint animation_left">
-			</div>
-
-			<div class="column is-7 pl0 pr0">
-				<h3 class="mb0 waypoint animation_right_d1">
-					EXPERIMENTE O<br>
-					LAZER TODOS OS<br>
-					DIAS, SEM RESERVAS.
-				</h3>
-			</div>
-		</div>
-
-
-
 	</div>
 
 </section>
 
-<section class="section-carousel pt0 pb0 is-relative pt80-mobile pb80-mobile pt100-notebook pb50-notebook pt100-tablet " id="galeria">
+<section class="section-carousel carousel-1 pt0 pb0 is-relative pt80-mobile pb80-mobile pt100-notebook pb50-notebook pt100-tablet " id="galeria">
     <div class="wrap pl50-mobile pr50-mobile">
-        <img src="<?=IMG.'paper-background-carousel.webp'?>" class="paper-background " alt="">
-
-        <div class="columns">
-            <div class="column is-5"> </div>
-            <div class="column is-9">
-                <hr class="ml15 ml45-mobile ">
-            </div>
-        </div>
-
-        <div class="swiper slide-imoveis swiper-imoveis mt60 mb150 mb0-tablet mt15-mobile mb10-mobile">
+        <div class="swiper slide-imoveis swiper-imoveis pb150 mb0-tablet mt15-mobile mb10-mobile">
             <div class="swiper-wrapper">
                 <?php foreach ($qGaleria1 as $card): ?>
                     <div class="swiper-slide" data-title="<?= $card->legenda; ?>">
@@ -399,7 +352,6 @@ $lazerList = [
 
             <div class="swiper-scrollbar"></div>
         </div>
-
     </div>
 </section>
 
@@ -466,19 +418,25 @@ $lazerList = [
 
 
 				<div class="column is-4-tablet is-12-mobile waypoint animation_left is-order-0-mobile pl5 pl10-mobile pr10-mobile pb0-mobile" id="plaza-garden">
-					<div class="box-p bg-ll-gray mt0 pt60 pl70 pr60  pt40-tablet pl40-tablet pr40-tablet  pl60-mobile">
+					<div class="box-p bg-ll-gray mt0 pt50 pl50 pr60 pb75 pt40-tablet pl40-tablet pr40-tablet  pl60-mobile">
                         <h2 class="medium">Ana Holzer</h2>
 
-                        <h2 class="medium">autora do pro<span>j</span>eto de paisagismo</h2>
+                        <h2 class="smaller">autora do pro<span>j</span>eto de paisagismo</h2>
 
-						<p class="mt30 has-text-weight-light pl20 pr20">
-							No Plaza Garden, a natureza se revela em um cenário onde o verde contorna suavemente cada curva. Esta praça particular é projetada com um paisagismo envolvente, com ambientes que reforçam a conexão com a natureza, trazendo harmonia e frescor para o dia a dia.
+						<p class="mt30 has-text-weight-light">
+                            “Quando iniciamos o projeto do <strong>Brava Riserva</strong>, tínhamos um desejo claro e profundo: que as pessoas experimentassem a natureza como parte essencial do seu dia a dia.
+                            <br><br>
+                            Neste sentido, o <strong>Brava Riserva</strong> pode ser descrito como um verdadeiro oásis natural.
+                            <br><br>
+                            Águas cristalinas que correm como riacho sereno, o calor do fogo acolhendo momentos de boas conversas, o ar puro da Brava permeando cada experiência, e a terra, generosa, abrigando jardins deslumbrantes de flores e frutos.
+                            <br><br>
+                            Assim é viver neste empreendimento, onde o conforto e a modernidade se encontram em perfeita harmonia com a exuberância do paisagismo.”
 						</p>
-
-						<a href="<?=LINK_WHATSAPP?>" class="btn padding-top:29px_windows is-big-mob mt30 mb50"><span>FALE CONOSCO</span></a>
 					</div>
 
                     <img src="<?=IMG.'folha-background-vertical.webp'?>" class="folha-vertical" alt="">
+
+                    <img src="<?=IMG.'ana-holzer-assinatura.webp'?>" class="ana-holzer-ass" alt="">
 				</div>
 			</div>
 
@@ -507,32 +465,144 @@ $lazerList = [
 
 
 
+<?php
+$plantas = [
+    [
+        'final' => 'final 1',
+        'titulo' => 'apartamento final 1',
+
+        'imagens' => [
+            'desktop' => 'plantas/01.webp',
+            'mobile'  => 'plantas/01-mobile.webp',
+        ],
+
+        'atributos' => [
+            [
+                'icone' => 'icons/metragem.webp',
+                'valor' => '130m²',
+            ],
+            [
+                'icone' => 'icons/cama.webp',
+                'valor' => '3 suítes',
+            ],
+        ],
+
+        'lista' => [
+            'Churrasqueira a carvão',
+            'Piso vinílico nas áreas íntimas',
+            'Quartos com persianas embutidas',
+            'Fechadura biométrica nas portas de entrada',
+        ],
+
+        'descricao' => [
+            'Cada ambiente convida a sentir a calma e o frescor',
+            'da Praia Brava dentro de casa.',
+        ],
+    ],
+
+    // 🔹 SEGUNDA PLANTA (teste)
+    [
+        'final' => 'final 2',
+        'titulo' => 'apartamento final 2',
+
+        'imagens' => [
+            'desktop' => 'plantas/02.webp',
+            'mobile'  => 'plantas/02-mobile.webp',
+        ],
+
+        'atributos' => [
+            [
+                'icone' => 'icons/metragem.webp',
+                'valor' => '145m²',
+            ],
+            [
+                'icone' => 'icons/cama.webp',
+                'valor' => '4 suítes',
+            ],
+        ],
+
+        'lista' => [
+            'Living integrado',
+            'Sacada com churrasqueira',
+            'Piso porcelanato nas áreas sociais',
+            'Fechadura eletrônica',
+        ],
+
+        'descricao' => [
+            'Espaços amplos que valorizam conforto e sofisticação',
+            'em cada detalhe do projeto.',
+        ],
+    ],
+];
+?>
 
 
+<?php
+$plantas = [
+    [
+        'imagem_mobile'  => 'plantas/01-mobile.webp',
+        'imagem_desktop' => 'plantas/01.webp',
+        'titulo' => 'apartamento final 1',
+        'metragem' => '130m²',
+        'suites' => '3 suítes',
+        'itens' => [
+            'Churrasqueira a carvão',
+            'Piso vinílico nas áreas íntimas',
+            'Quartos com persianas embutidas',
+            'Fechadura biométrica nas portas de entrada',
+        ],
+        'descricao' => [
+            'Cada ambiente convida a sentir a calma e o frescor',
+            'da Praia Brava dentro de casa.',
+        ],
+    ],
 
-<section class="section-plantas " id="plantas" style="<?=$MOBILE ? 'padding-bottom: 110px;' : '';?>">
+    // segunda planta (exemplo)
+    [
+        'imagem_mobile'  => 'plantas/01-mobile.webp',
+        'imagem_desktop' => 'plantas/02.webp',
+        'titulo' => 'apartamento final 2',
+        'metragem' => '145m²',
+        'suites' => '4 suítes',
+        'itens' => [
+            'Churrasqueira a carvão',
+            'Piso vinílico nas áreas íntimas',
+            'Quartos com persianas embutidas',
+            'Fechadura biométrica nas portas de entrada',
+        ],
+        'descricao' => [
+            'Cada ambiente convida a sentir a calma e o frescor',
+            'da Praia Brava dentro de casa.',
+        ],
+    ],
+];
+?>
+
+<section class="section-plantas pt120 is-relative" id="plantas" style="<?=$MOBILE ? 'padding-bottom: 110px;' : '';?>">
+    <img src="<?=IMG.'folha-horizontal.webp'?>" class="folha-horizontal" alt="folha">
 	<div class="wrap wide pl10-mobile pr10-mobile">
 
 		<div class="columns is-centered is-mobile">
-			<div class="column is-one-fifth-tablet is-2-mobile pl0 pr0 pr0-mobile"><hr class="is-full mt40 mt30-tablet mt25-mobile waypoint animation_scale_d1"></div>
+			<div class="column is-one-fifth-tablet is-2-mobile pl0 pr0 pr0-mobile is-flex is-justify-content-flex-end">
+                <hr class="is-full mt45 mt30-tablet mt25-mobile waypoint animation_scale_d1">
+             </div>
 			<div class="column is-4-tablet is-8-mobile">
-				<h2 class="is-big has-text-centered mb0-mobile waypoint animation_bottom">apartamentos</h2>
+				<h2 class="bigger has-text-centered  mb10 mb0-mobile waypoint animation_bottom">apartamentos</h2>
 			</div>
-			<div class="column is-one-fifth-tablet is-2-mobile pl0 pr0 pl0-mobile"><hr class="is-full mt40 mt30-tablet mt25-mobile waypoint animation_scale_d1"></div>
+			<div class="column is-one-fifth-tablet is-2-mobile pl0 pr0 pl0-mobile">
+                <hr class="is-full mt45 mt30-tablet mt25-mobile waypoint animation_scale_d1">
+            </div>
 		</div>
 
-		
+
 
 
 
 		<div class="columns is-centered is-mobile mb0-mobile">
 			<div class="column is-9-tablet is-12-mobile">
-				<div class="plantas-nav is-flex is-justify-content-space-between mt20 mt10-mobile is-relative waypoint animation_bottom" id="plantas-nav">
+				<div class="plantas-nav is-flex  mt10-mobile is-relative waypoint animation_bottom" id="plantas-nav">
 					<a class="" ><span>final 1</span></a>
 					<a class="" ><span>final 2</span></a>
-					<a class="" ><span>final 3</span></a>
-					<a class="" ><span>final 4</span></a>
-					<a class="" ><span>final 5</span></a>
 				</div>
 			</div>
 		</div>
@@ -549,11 +619,11 @@ $lazerList = [
 
 
 
-		<div 
-			class="plantas-slide cycle-slideshow waypoint animation_bottom mt70 mt50-tablet mt0-mobile" 
-			data-cycle-slides=".li" 
-			data-cycle-timeout="0" 
-			data-cycle-log="false" 
+		<div
+			class="plantas-slide cycle-slideshow waypoint animation_bottom mt70 mt50-tablet mt0-mobile"
+			data-cycle-slides=".li"
+			data-cycle-timeout="0"
+			data-cycle-log="false"
 			data-cycle-pager="#plantas-nav"
 			data-cycle-pause-on-hover="true"
     		data-cycle-pager-template=""
@@ -562,63 +632,58 @@ $lazerList = [
     	>
 
 
-			<div class="li">
-				<div class="box-img has-text-centered">
-					<picture>
-						<source srcset="<?=IMG?>plantas/01-mobile.webp" media="(max-width: 578px)">
-						<source srcset="<?=IMG?>plantas/01.webp" media="(min-width: 579px)">
-						<img src="<?=IMG?>plantas/01.webp" alt="planta">
-					</picture>
-				</div>
-			</div>
 
-			
-			<div class="li">
-				<div class="box-img has-text-centered">
-					<picture>
-						<source srcset="<?=IMG?>plantas/02-mobile.webp" media="(max-width: 578px)">
-						<source srcset="<?=IMG?>plantas/02.webp" media="(min-width: 579px)">
-						<img src="<?=IMG?>plantas/02.webp" alt="planta">
-					</picture>
-				</div>
-			</div>
+            <?php foreach ($plantas as $planta): ?>
+                <div class="li">
+                    <div class="planta-content">
 
-			<div class="li">
-				<div class="box-img has-text-centered">
-					<picture>
-						<source srcset="<?=IMG?>plantas/03-mobile.webp" media="(max-width: 578px)">
-						<source srcset="<?=IMG?>plantas/03.webp" media="(min-width: 579px)">
-						<img src="<?=IMG?>plantas/03.webp" alt="planta">
-					</picture>
-				</div>
-			</div>
+                        <div class="box-img has-text-centered">
+                            <picture>
+                                <source srcset="<?= IMG . $planta['imagem_mobile']; ?>" media="(max-width: 578px)">
+                                <source srcset="<?= IMG . $planta['imagem_desktop']; ?>" media="(min-width: 579px)">
+                                <img src="<?= IMG . $planta['imagem_desktop']; ?>" alt="planta">
+                            </picture>
+                        </div>
 
+                        <div class="description">
+                            <h2 class="medium"><?= $planta['titulo']; ?></h2>
 
-			<div class="li">
-				<div class="box-img has-text-centered">
-					<picture>
-						<source srcset="<?=IMG?>plantas/04-mobile.webp" media="(max-width: 578px)">
-						<source srcset="<?=IMG?>plantas/04.webp" media="(min-width: 579px)">
-						<img src="<?=IMG?>plantas/04.webp" alt="planta">
-					</picture>
-				</div>
-			</div>
+                            <!-- ÍCONE FIXO -->
+                            <div class="atributo-item">
+                                <img src="<?= IMG.'icons/metragem.webp'; ?>" alt="">
+                                <h2 class="mb0"><?= $planta['metragem']; ?></h2>
+                            </div>
 
+                            <!-- ÍCONE FIXO -->
+                            <div class="atributo-item mt25">
+                                <img src="<?= IMG.'icons/cama.webp'; ?>" alt="">
+                                <h2 class="mb0"><?= $planta['suites']; ?></h2>
+                            </div>
 
-			<div class="li">
-				<div class="box-img has-text-centered">
-					<picture>
-						<source srcset="<?=IMG?>plantas/05-mobile.webp" media="(max-width: 578px)">
-						<source srcset="<?=IMG?>plantas/05.webp" media="(min-width: 579px)">
-						<img src="<?=IMG?>plantas/05.webp" alt="planta">
-					</picture>
-				</div>
-			</div>
+                            <p class="mt20">
+                                Churrasqueira a carvão <br>
+                                Piso vinílico nas áreas íntimas <br>
+                                Quartos com persianas embutidas <br>
+                                Fechadura biométrica nas portas de entrada <br>
+                            </p>
+
+                            <p class="color-primary mt25">
+                                Cada ambiente convida a sentir a calma e o frescor <br>
+                                da Praia Brava dentro de casa. <br>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            <?php endforeach; ?>
+
 
 		</div>
 
-
 	</div>
+
+
+
 </section>
 
 

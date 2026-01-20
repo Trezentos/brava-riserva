@@ -130,11 +130,7 @@ $pg = $_SEO["permalink"];
 
 
 					<div class="column is-1-tablet is-4-mobile is-relative waypoint animation_right_dd2">
-						<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-							<span aria-hidden="true"></span>
-							<span aria-hidden="true"></span>
-							<span aria-hidden="true"></span>
-						</a>
+						
 					</div>
 
 				</div>
@@ -146,39 +142,6 @@ $pg = $_SEO["permalink"];
 	</header>
 
 
-
-
-
-
-
-
-
-
-
-	<div class="menu waypoint animation_bottom">
-
-		<img class="bt-close-menu waypoint animation_scale" src="<?=IMG?>icons/close.svg" alt="Fechar">
-
-		<div class="container-menu xhas-text-centered">
-			<ul class="waypoint animation_right_d1 animated font-secondary">
-				<li> <a href="#empreendimento"  class="menu-item smooth-scroll-link" data-smooth-time-link="2500">PLAZA BEACH RESIDENCE</a></li>
-				<li> <a href="#detalhes-tec" 	class="menu-item smooth-scroll-link" data-smooth-time-link="3500">DETALHES TÉCNICOS</a></li>
-				<li> <a href="#lazer" 			class="menu-item smooth-scroll-link" data-smooth-time-link="4000">LAZER</a></li>
-				<li> <a href="#plaza-beach" 	class="menu-item smooth-scroll-link" data-smooth-time-link="5000">PLAZA BEACH</a></li>
-				<li> <a href="#plaza-garden" 	class="menu-item smooth-scroll-link" data-smooth-time-link="5000">PLAZA GARDEN</a></li>
-				<li> <a href="#plantas" 		class="menu-item smooth-scroll-link" data-smooth-time-link="5000">APARTAMENTOS</a></li>
-				<li> <a href="#diferenciais"  	class="menu-item smooth-scroll-link" data-smooth-time-link="5000">DIFERENCIAIS</a></li>
-				<li> <a href="#contato" 		class="menu-item smooth-scroll-link" data-smooth-time-link="6000">CONTATO</a></li>
-			</ul>
-		</div>
-
-		<img class="logo waypoint animation_right_d3 animated" src="<?=IMG?>plaza-beach-residence-form.svg" alt="logo">
-
-		<div class="phone font-secondary waypoint animation_right_d3 animated">
-			<a href="<?=LINK_WHATSAPP?>" target="_blank" class="ml20 ml0-mobile is-block-mobile"><?=CELULAR?></a>
-		</div>
-
-	</div>
 
 
 

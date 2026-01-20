@@ -20,7 +20,7 @@
   .folha-background {
     position: absolute;
     bottom: 0;
-    left: 381px;
+    left: 355px;
   }
 
 
@@ -110,9 +110,7 @@
 
 
 .section-lazer{
-  background: #768976;
-
-
+  background: $primary-color url(../../img/bg-texture-light.webp);
 
 
   .planta-lazer {
@@ -157,6 +155,8 @@
       display: flex;
       align-items: center;
 
+
+
       span.number {
         padding: .25rem;
         height: 25.34px;
@@ -170,10 +170,21 @@
 
       }
 
-      p {
-        font-weight: 500;
-        color: $light-color-3;
+      a {
+        border: 2px solid $green-1;
+        padding-left: 12px;
+        width: 214px;
 
+        p {
+          font-weight: 500;
+          color: $light-color-3;
+
+        }
+
+
+        &:hover {
+          background-color: $green-2;
+        }
       }
     }
   }
@@ -184,7 +195,7 @@
 
 
 .section-galeria{
-  background: $primary-color;
+  background: $primary-color url(../../img/bg-texture-light.webp);
   
   
   .item{
@@ -323,18 +334,14 @@ section.video {
 
   picture {
     position: relative;
-    margin-top: -200px;
+    margin-top: -400px;
     display: block;
-    //&::after {
-    //  content: '';
-    //  position: absolute;
-    //  inset: 0;
-    //  pointer-events: none;
-    //  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 0.15) 60%, rgba(0, 0, 0, 0) 100%);
-    //}
+
   }
 
-
+  strong {
+    font-weight: 600;
+  }
 
   .txt{
     @include absolute($t: 155px);
@@ -363,11 +370,16 @@ section.video {
   .folha-vertical {
     position: absolute;
     right: -212px;
-    bottom: 332px;
+    bottom: 589px;
     z-index: -1;
   }
 
-
+  .ana-holzer-ass {
+    position: absolute;
+    right: 60px;
+    bottom: -126px;
+    z-index: -1;
+  }
 }
 
 
@@ -377,10 +389,26 @@ section.video {
 .section-plantas{
   background-color: $light-color-2;
 
-  hr{ height: 2px; }
+  .folha-horizontal {
+    position: absolute;
+    left: 1415px;
+    top: 360px;
+  }
+
+  h2 {
+    color: $secondary-color;
+  }
+
+  hr{
+    height: 2px;
+    background-color: $light-color-4;
+    max-width: 240px;
+  }
 
   .plantas-nav{
-    // z-index: 101;
+    display: flex;
+    justify-content: center;
+    gap: 65px;
 
     a{
       position: relative;
@@ -388,10 +416,8 @@ section.video {
       margin: 0px 0;
       padding: 7px 23px 7px;
       border-radius: 30px;
-      font-size: 1.2em;
+      font-size: 1.4em;
       overflow: hidden;
-      // color: $primary-color;
-      letter-spacing: 0.25em;
       @include transition(0.3s);
 
       span{
@@ -440,6 +466,27 @@ section.video {
 
 
   }
+
+  .planta-content {
+    display: flex;
+    justify-content: center;
+    gap: 75px;
+
+    h2.medium { color: $primary-color; }
+
+    .atributo-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    p {
+      font-weight: 500;
+    }
+  }
+
+
+
 }
 
 
@@ -768,6 +815,9 @@ section.video {
         // border-radius: 15px;
       }
     }
+
+
+
   }
 
 
