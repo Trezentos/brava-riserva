@@ -2,7 +2,20 @@ footer{
   padding-top: 30px;
   padding-bottom: 30px;
 
-  p{ font-size: 1.1em; }
+  .content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  p.text {
+    text-align: left;
+    width: min(100%, 655px);
+  }
+
+  p{
+    font-size: 1.1em;
+    color: $light-color-2;
+  }
 
   .assinatura{
     color: $primary-color;
@@ -19,11 +32,11 @@ footer{
 
   // FOOTER
   footer{
-    // small{
-    //     display: block;
-    //     line-height: 1.4;
-    // }
+
     .assinatura{ font-size: 1.4em; }
+
+
+
   }
 
 

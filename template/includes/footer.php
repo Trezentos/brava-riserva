@@ -2,19 +2,21 @@
 $pg = $_SEO["permalink"];
 ?>
 
-			<footer class="bg-l-gray is-relative has-text-centered">
+			<footer class="bg-primary is-relative has-text-centered">
 				<div class="wrap">
+					<div class="content">
+                        <p class="waypoint animation_bottom text">
+                            Informamos que as ilustrações contidas neste material possuem apenas caráter de sugestão. Os móveis, assim como materiais de acabamento apresentados nas ilustrações e plantas, não constituem parte integrande do contrato. O apartamento será entregue conforme indicado no memorial descritivo, podendo haver modificações do projeto estrutural sem aviso prévio.
+                            Imagens meramete ilustrativas.
+                        </p>
 
-					<p class="waypoint animation_bottom">
-						Material sujeito à alteração. De acordo com a Lei no 4591/64, informamos que as imagens contidas neste material possuem apenas caráter de sugestão, reservando-nos o direito de alterar as especificações deste material publicitário, prevalecendo as informações destacadas no ato da venda, estabelecidas no contrato e memorial descritivo do empreendimento.
-					</p>
 
+                        <div class="assinatura mt20 waypoint animation_bottom">
+                            <p>© 2026 Clarus - Todos os direitos reservados.</p>
 
-					<div class="assinatura mt20 waypoint animation_bottom">
-						<a class="mr5" href="https://quax.com.br" target="_blank">QUAX</a>
-						+
-						<a class="ml5" href="https://mosimanndesign.com.br/" target="_blank">MOSIMANN DESIGN</a>
-					</div>
+                            <a class="mr5" href="https://quax.com.br" target="_blank">Desenvolvimento QUAX.</a>
+                        </div>
+                    </div>
 
 				</div>
 			</footer>

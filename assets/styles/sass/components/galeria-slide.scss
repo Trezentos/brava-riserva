@@ -14,6 +14,7 @@
     background: $primary-color url(../../img/bg-texture-light.webp);
   }
 
+
   h2 {
     color: $primary-color;
     font-size: 2.8em;
@@ -129,27 +130,19 @@
 
 
   &.second {
-    margin-top: -33px;
+    background-color: $light-color-2;
 
-    .wrap { padding-top: 0; }
+    .slide-imoveis .swiper-wrapper {
 
-    hr {
-      margin-bottom: 60px;
-      width: 300%;
-    }
+      .swiper-slide-active {
+        background-color: $light-color-2;
 
-    .swiper-scrollbar-horizontal { background: #B8B1A5; }
 
-    .swiper.slide-imoveis .swiper-slide h2 {
-      left: 0;
-
-      span{
-        color: $primary-color;
-        padding-left: 20px;
-        font-size: 0.6em;
+        h2 {
+          color: $secondary-color;
+        }
       }
     }
-
   }
 }
 
@@ -185,6 +178,7 @@
   --swiper-scrollbar-bottom: 100px;
   bottom: 15px !important;
 
+
   .swiper-button-prev,
   .swiper-button-next {
     bottom: 15px !important;
@@ -200,7 +194,16 @@
       height: 18px;
     }
   }
+
+
+  &.second {
+    --swiper-scrollbar-bottom: 90px !important;
+    --swiper-scrollbar-bg-color: #{$primary-color};
+    --swiper-scrollbar-drag-bg-color: #{$primary-color};
+
+  }
 }
+
 
 
 // =======================

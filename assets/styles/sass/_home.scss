@@ -569,34 +569,179 @@ section.video {
 
 
 .section-localizacao{
-  h2{
-    font-size: 4.3em;
-    letter-spacing: .05em;
-    line-height: 1.2;
-  }
+  background-color: $primary-color;
+  padding-top: 0;
 
-  h3{
-    font-size: 1.8em;
-    letter-spacing: .4em;
-    line-height: 2.2;
-  }
+  .side-col {
+    position: relative;
 
-  .address{
-    font-size: 1.6em;
-    letter-spacing: 0.2em;
-  }
-
-  .proximidades{
-    .item{
-      font-size: 1.2em;
+    .square-fill {
+      height: 340px;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: -1px;
+      background: $light-color-2;
     }
   }
 
-  .maps{
-    border: 1px solid $d-gray;
-    // filter: sepia(72%) brightness(78%) hue-rotate(335deg) saturate(107%) contrast(99%);
-    // -webkit-filter: sepia(72%) brightness(78%) hue-rotate(335deg) saturate(107%) contrast(99%);
-    // -moz-filter: sepia(72%) brightness(78%) hue-rotate(335deg) saturate(107%) contrast(99%);
+
+  .grid-wrap {
+    display: grid;
+    grid-template-columns: 12.76% 87.24%;
+  }
+
+
+
+  .description-content {
+    display: flex;
+    width: 100%;
+    max-width: 1280px;
+
+    .conexao-container{
+      max-width: 527px;
+      width: 100%;
+
+      .folha {
+        position: absolute;
+        top: -157px;
+        left: 150px;
+        z-index: 0;
+
+      }
+
+      .conexao-block {
+        background-color: $light-color-3;
+        width: 366px;
+        position: absolute;
+        right: 48px;
+        bottom: 360px;
+        z-index: 1;
+
+
+        p { color: $root-color; }
+
+        a { color: $primary-color; }
+
+        p img {
+          position: absolute;
+          left: -20px;
+        }
+
+        .cliente-block {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+
+          small { color: $primary-color; }
+
+          &.permutante {
+            small {
+              position: relative;
+              right: 17px;
+            }
+          }
+        }
+
+
+      }
+    }
+
+    .text-content {
+      padding-right: 20px;
+      max-width: 780px;
+      width: 100%;
+      color: $light-color-3;
+
+      h2 { color: $light-color-3; }
+
+      strong {
+        font-weight: 700;
+        color: $light-color-3;
+      }
+
+    }
+  }
+
+
+
+
+}
+
+section.contato-section {
+  background-color: $light-color-2;
+
+  h2 {
+    font-size: 48px;
+  }
+
+  .form-block {
+
+    .top-block {
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+      justify-content: center;
+      gap: 82px;
+
+      hr {
+        background-color: $light-color-5;
+        width: 100%;
+        max-width: 220px;
+      }
+    }
+
+
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    form {
+      .row {
+        display: flex;
+        gap: 16px;
+      }
+
+      label.checkbox {
+        gap: 9px;
+
+      }
+
+      .checkbox-group{
+        line-height: 1.25;
+
+
+        a {
+          font-weight: 700;
+        }
+      }
+
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: flex-end;
+
+      .btn {
+        margin: 0;
+        padding: 16px 46px;
+
+        span {
+          font-size: 16px;
+          color: $light-color-2;
+          letter-spacing: 1px;
+          font-weight: 600;
+        }
+      }
+
+    }
+
+    .checkbox-group {
+      small {
+        font-size: 11px;
+      }
+    }
   }
 }
 
@@ -635,33 +780,14 @@ section.video {
 // Notebook
 @media only screen and (min-width: 1025px) and (max-width: 1499px) {
 
-.section-block-2 {
-    .slide-content .slide-item {
-      max-width: 700px;
-    }
-
-    .all-contents {
-      justify-content: space-between !important;
-      flex-wrap: nowrap !important;
-
-      .slide-galeria {
-        margin-top: 120px !important;
-      }
-    }
-
-
-
+  .section-localizacao .description-content .conexao-container .conexao-block {
+    bottom: 170px;
   }
 
-
-
-  .section-lazer {
-    .box-itens-lazer {
-      &.pl30 {
-        padding-left: 0 !important;
-      }
-    }
+  .section-localizacao .description-content .conexao-container {
+    max-width: 414px;
   }
+
 }
 
 

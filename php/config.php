@@ -190,7 +190,7 @@ define('REPLY_EMAIL', $qConfig->email_reply);
 
 
 if(LOCALHOST) {
-	define('EMAIL_CONTATO','willian@quax.com.br');
+	define('EMAIL_CONTATO','gustavo@quax.com.br');
 }else{
 	define('EMAIL_CONTATO', $qConfig->email_contato);
 }
