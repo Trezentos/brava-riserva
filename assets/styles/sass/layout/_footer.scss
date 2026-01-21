@@ -10,6 +10,7 @@ footer{
   p.text {
     text-align: left;
     width: min(100%, 655px);
+    line-height: 16px;
   }
 
   p{
@@ -18,10 +19,14 @@ footer{
   }
 
   .assinatura{
-    color: $primary-color;
+    color: $light-color-2;
+    text-align: right;
 
     a{
-      &:hover{ color: #FFF; }
+      color: $light-color-3;
+
+
+      &:hover{ color: $light-color-2; }
     }
   }
 }

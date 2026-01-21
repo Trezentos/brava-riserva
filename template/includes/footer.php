@@ -7,6 +7,7 @@ $pg = $_SEO["permalink"];
 					<div class="content">
                         <p class="waypoint animation_bottom text">
                             Informamos que as ilustrações contidas neste material possuem apenas caráter de sugestão. Os móveis, assim como materiais de acabamento apresentados nas ilustrações e plantas, não constituem parte integrande do contrato. O apartamento será entregue conforme indicado no memorial descritivo, podendo haver modificações do projeto estrutural sem aviso prévio.
+                            <br>
                             Imagens meramete ilustrativas.
                         </p>
 
